@@ -20,7 +20,6 @@ export default function Wishlist() {
             key={item.id}
             className="relative border rounded-lg p-4 hover:shadow-md transition bg-white"
           >
-            {/* 🔴 OFFER BADGE */}
             {hasOffer && (
               <span
                 className="
@@ -50,7 +49,6 @@ export default function Wishlist() {
               {item.name}
             </h3>
 
-            {/* 💰 PRICE */}
             <div className="mt-2">
               {hasOffer ? (
                 <div className="flex items-center gap-2">

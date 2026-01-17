@@ -191,9 +191,21 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4">
 
         {/* LOGO */}
-        <Link to="/" className="text-2xl font-bold tracking-wide">
-          Beauty-Co
-        </Link>
+        <Link
+  to="/"
+  className="
+    text-2xl
+    font-bold
+    tracking-wide
+    bg-gradient-to-r
+    from-pink-500
+    to-purple-400
+    bg-clip-text
+    text-transparent
+  "
+>
+  Beauty-Co
+</Link>
 
         {/* MAIN MENU */}
         <nav className="hidden md:flex gap-8 text-sm font-medium uppercase">

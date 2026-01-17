@@ -14,8 +14,12 @@ export default function Orders() {
         const res = await fetch(
           `http://localhost:3000/users/${user.id}`
         );
-        const data = await res.json();
-        setOrders(data.orders || []);
+        const data = await res.json(); 
+        const sortedOrders = (data.orders || []).sort(
+  (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+);
+
+setOrders(sortedOrders);
       } catch (err) {
         console.error("Failed to fetch orders", err);
       } finally {
@@ -26,7 +30,6 @@ export default function Orders() {
     fetchOrders();
   }, [user]);
 
-  // NOT LOGGED IN
   if (!user) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -35,7 +38,6 @@ export default function Orders() {
     );
   }
 
-  // LOADING
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -44,7 +46,6 @@ export default function Orders() {
     );
   }
 
-  // NO ORDERS
   if (orders.length === 0) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -65,7 +66,6 @@ export default function Orders() {
             key={order.id}
             className="bg-white rounded-xl shadow-sm p-6"
           >
-            {/* ORDER HEADER */}
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
               <div>
                 <p className="font-medium text-lg">
@@ -82,14 +82,12 @@ export default function Orders() {
               </span>
             </div>
 
-            {/* ORDER ITEMS */}
             <div className="divide-y">
               {order.items.map((item) => (
                 <div
                   key={item.cartItemId}
                   className="flex gap-4 py-4"
                 >
-                  {/* IMAGE */}
                   <div className="w-20 h-20 bg-gray-100 rounded flex items-center justify-center">
                     <img
                       src={item.img}
@@ -98,7 +96,6 @@ export default function Orders() {
                     />
                   </div>
 
-                  {/* DETAILS */}
                   <div className="flex-1">
                     <h3 className="font-medium text-sm sm:text-base">
                       {item.name}
@@ -117,7 +114,6 @@ export default function Orders() {
                     </p>
                   </div>
 
-                  {/* PRICE */}
                   <div className="text-sm font-medium">
                     ₹{item.price * item.qty}
                   </div>
@@ -125,7 +121,6 @@ export default function Orders() {
               ))}
             </div>
 
-            {/* ORDER TOTAL */}
             <div className="flex justify-end mt-6">
               <p className="text-lg font-semibold">
                 Total: ₹{order.total}

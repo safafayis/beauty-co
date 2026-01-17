@@ -17,28 +17,29 @@ export default function Login() {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError("");
 
-    try {
-      const res = await axios.get(
-        `http://localhost:3000/users?email=${form.email}&password=${form.password}`
-      );
+  try {
+    const res = await axios.get(
+      `http://localhost:3000/users?user.email=${form.email}&user.password=${form.password}`
+    );
 
-      if (res.data.length === 0) {
-        setError("Invalid email or password");
-        return;
-      }
-
-      // ✅ ALWAYS STORE IN LOCAL STORAGE
-      localStorage.setItem("user", JSON.stringify(res.data[0]));
-
-      navigate("/");
-    } catch (err) {
-      setError("Server error. Please try again.");
+    if (res.data.length === 0) {
+      setError("Invalid email or password");
+      return;
     }
-  };
+
+    // ✅ Store correct logged-in user
+    localStorage.setItem("user", JSON.stringify(res.data[0]));
+
+    navigate("/");
+  } catch (err) {
+    setError("Server error. Please try again.");
+  }
+};
+
 
   return (
     <div className="flex h-screen bg-cream font-serif">

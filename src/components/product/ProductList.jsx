@@ -16,12 +16,10 @@ export default function ProductList() {
       {Object.entries(products).map(([category, items]) => (
         <div key={category} className="mb-16">
 
-          {/* Category Title */}
           <h2 className="text-xl sm:text-2xl font-semibold capitalize mb-6">
             {category.replace(/([A-Z])/g, " $1")}
           </h2>
 
-          {/* Products Grid */}
           <div
             className="
               grid

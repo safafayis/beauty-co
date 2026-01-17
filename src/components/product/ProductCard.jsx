@@ -11,7 +11,7 @@ export default function ProductCard({ product }) {
 
   const [sizeOpen, setSizeOpen] = useState(false);
 
-  // 🔥 OFFER LOGIC
+  
   const hasOffer = product.offer === true;
   const discountPercent = 20;
 

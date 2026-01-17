@@ -78,28 +78,15 @@
       "id": "2afd",
       "cart": [
         {
-          "id": 202,
-          "name": "Eyeconic Liner",
-          "brand": "Lakme",
-          "price": 260,
-          "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
-          "des": "Water-resistant liquid eyeliner.",
-          "offer": true,
-          "size": "50ml",
-          "qty": 1,
-          "cartItemId": "fe0ceaa4-68db-4d41-a673-3c7579e79fe9"
-        },
-        {
-          "id": 304,
-          "name": "Mask Fit All Cover Pink Cushion Foundation",
-          "brand": "TIRTIR",
-          "price": 1999,
-          "img": "https://i.pinimg.com/1200x/8a/42/79/8a4279d6980dcf3e9ad9a8d45038cce7.jpg",
-          "des": "A high-coverage cushion foundation designed to stay put under masks.",
-          "offer": true,
+          "id": 103,
+          "name": "Powder Kiss Lipstick",
+          "brand": "MAC",
+          "price": 2550,
+          "img": "https://i.pinimg.com/1200x/41/52/f7/4152f73e54d41838c59309d66d31f841.jpg",
+          "des": "Soft-focus matte lipstick with cushiony texture.",
           "size": "150ml",
           "qty": 1,
-          "cartItemId": "25f226cd-1a2a-4fe5-aa5f-69f055426d4e"
+          "cartItemId": "3c344c70-45b4-40a0-ae26-139863ce62bc"
         }
       ],
       "orders": [
@@ -142,6 +129,144 @@
           "total": 999,
           "status": "Placed",
           "createdAt": "2026-01-15T08:56:13.592Z"
+        },
+        {
+          "id": "d251fa75-658f-4dfd-9a36-e35e45933dc2",
+          "userId": "2afd",
+          "items": [
+            {
+              "id": 202,
+              "name": "Eyeconic Liner",
+              "brand": "Lakme",
+              "price": 260,
+              "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
+              "des": "Water-resistant liquid eyeliner.",
+              "offer": true,
+              "size": "50ml",
+              "qty": 1,
+              "cartItemId": "fe0ceaa4-68db-4d41-a673-3c7579e79fe9"
+            },
+            {
+              "id": 304,
+              "name": "Mask Fit All Cover Pink Cushion Foundation",
+              "brand": "TIRTIR",
+              "price": 1999,
+              "img": "https://i.pinimg.com/1200x/8a/42/79/8a4279d6980dcf3e9ad9a8d45038cce7.jpg",
+              "des": "A high-coverage cushion foundation designed to stay put under masks.",
+              "offer": true,
+              "size": "150ml",
+              "qty": 1,
+              "cartItemId": "25f226cd-1a2a-4fe5-aa5f-69f055426d4e"
+            },
+            {
+              "id": 101,
+              "name": "Creamy Matte Lipstick",
+              "brand": "Lakme",
+              "price": 239,
+              "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
+              "des": "A creamy matte lipstick with intense color payoff.",
+              "offer": true,
+              "size": "50ml",
+              "qty": 2,
+              "cartItemId": "12404d0e-3dbe-4c48-bca9-e95eaa615ef9"
+            }
+          ],
+          "total": 2737,
+          "status": "Placed",
+          "createdAt": "2026-01-15T15:11:55.718Z"
+        },
+        {
+          "id": "d9d40b14-a135-4b05-995a-e826c99c3590",
+          "userId": "2afd",
+          "items": [
+            {
+              "id": 601,
+              "name": "Gentle Skin Cleanser",
+              "brand": "Cetaphil",
+              "price": 349,
+              "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+              "des": "Mild cleanser for sensitive skin.",
+              "size": "100ml",
+              "qty": 1,
+              "cartItemId": "b605b294-2ecc-4d82-8530-9f83b2e9d437"
+            },
+            {
+              "id": 601,
+              "name": "Gentle Skin Cleanser",
+              "brand": "Cetaphil",
+              "price": 349,
+              "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+              "des": "Mild cleanser for sensitive skin.",
+              "size": "50ml",
+              "qty": 1,
+              "cartItemId": "9839a995-1c38-41b5-98bf-d0ca9ae48d58"
+            }
+          ],
+          "total": 698,
+          "status": "Placed",
+          "createdAt": "2026-01-15T15:32:49.016Z"
+        },
+        {
+          "id": "1b6c4f53-63b4-4d55-9b05-913df3866485",
+          "userId": "2afd",
+          "items": [
+            {
+              "id": 101,
+              "name": "Creamy Matte Lipstick",
+              "brand": "Lakme",
+              "price": 239,
+              "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
+              "des": "A creamy matte lipstick with intense color payoff.",
+              "offer": true,
+              "size": "100ml",
+              "qty": 2,
+              "cartItemId": "db3f23e5-0788-45af-b622-4407cbcfceab"
+            }
+          ],
+          "total": 478,
+          "status": "Placed",
+          "createdAt": "2026-01-16T12:32:28.156Z"
+        },
+        {
+          "id": "3e755d2c-a54a-4f70-baec-5d9e3d0d71e5",
+          "userId": "2afd",
+          "items": [
+            {
+              "id": 102,
+              "name": "Color Sensational Matte",
+              "brand": "Maybelline",
+              "price": 319,
+              "img": "https://i.pinimg.com/736x/a2/cc/5f/a2cc5f64767ec2fa0b1213f1b72e2b63.jpg",
+              "des": "Highly pigmented matte lipstick enriched with oils.",
+              "offer": true,
+              "size": "100ml",
+              "qty": 2,
+              "cartItemId": "57dae233-3d25-4697-b6cc-2fbb6fd35030"
+            }
+          ],
+          "total": 638,
+          "status": "Placed",
+          "createdAt": "2026-01-17T03:56:07.771Z"
+        },
+        {
+          "id": "9ef05714-c61e-4232-8c45-7c1d1898783b",
+          "userId": "2afd",
+          "items": [
+            {
+              "id": 601,
+              "name": "Gentle Skin Cleanser",
+              "brand": "Cetaphil",
+              "price": 349,
+              "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+              "des": "Mild cleanser for sensitive skin.",
+              "size": "50ml",
+              "qty": 1,
+              "cartItemId": "84e35559-01b8-4402-99af-fe6c37def960"
+            }
+          ],
+          "total": 349,
+          "status": "Placed",
+          "createdAt": "2026-01-17T04:11:24.732Z"
         }
       ],
       "wishlist": [
@@ -152,6 +277,63 @@
           "price": 299,
           "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
           "des": "A creamy matte lipstick with intense color payoff.",
+          "offer": true
+        },
+        {
+          "id": 102,
+          "name": "Color Sensational Matte",
+          "brand": "Maybelline",
+          "price": 399,
+          "img": "https://i.pinimg.com/736x/a2/cc/5f/a2cc5f64767ec2fa0b1213f1b72e2b63.jpg",
+          "des": "Highly pigmented matte lipstick enriched with oils.",
+          "offer": true
+        },
+        {
+          "id": 806,
+          "name": "Warm Vanilla Sugar Gift Set",
+          "brand": "Bath & Body Works",
+          "price": 2399,
+          "img": "https://i.pinimg.com/1200x/fd/af/e5/fdafe50e3889ecf62adbdaf98b98c77c.jpg",
+          "des": "Vanilla scented bath set."
+        }
+      ]
+    },
+    {
+      "id": "07f2bd9f-7f9a-43d9-bca1-65ab4d5421b7",
+      "user": {
+        "name": "adil",
+        "email": "adil@gmail.com",
+        "password": "123",
+        "cart": [],
+        "wishlist": [],
+        "orders": []
+      },
+      "address": {},
+      "cart": [],
+      "orders": [],
+      "wishlist": []
+    },
+    {
+      "id": "2809778d-6402-4076-911d-e8b9be576828",
+      "user": {
+        "name": "rana",
+        "email": "rana@gamil.com",
+        "password": "12345",
+        "cart": [],
+        "wishlist": [],
+        "orders": []
+      },
+      "address": {},
+      "cart": [],
+      "orders": [],
+      "wishlist": [
+        {
+          "id": 202,
+          "name": "Eyeconic Liner",
+          "brand": "Lakme",
+          "price": 325,
+          "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
+          "des": "Water-resistant liquid eyeliner.",
           "offer": true
         }
       ]

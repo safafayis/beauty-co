@@ -31,14 +31,12 @@ export function OrderProvider({ children }) {
     };
 
     try {
-      // 1️⃣ Save to global orders
       await fetch("http://localhost:3000/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newOrder)
       });
 
-      // 2️⃣ Update user orders + empty cart
       const updatedUser = {
         ...user,
         orders: [...(user.orders || []), newOrder],
@@ -54,11 +52,9 @@ export function OrderProvider({ children }) {
         })
       });
 
-      // 3️⃣ Update localStorage
       localStorage.setItem("user", JSON.stringify(updatedUser));
 
-      // 4️⃣ Clear cart ONLY LOCALLY
-      clearCart(false); // 🔥 pass flag to skip DB sync
+      clearCart(false); 
     } catch (err) {
       console.error("Order failed", err);
     }

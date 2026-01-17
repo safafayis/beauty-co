@@ -28,7 +28,7 @@ export default function ProductSingleDetails() {
     return <p className="text-center mt-20">Loading...</p>;
   }
 
-  // 🔥 OFFER LOGIC
+
   const hasOffer = product.offer === true;
   const discountedPrice = hasOffer
     ? Math.round(product.price * 0.8)
@@ -51,10 +51,8 @@ export default function ProductSingleDetails() {
     <section className="px-4 sm:px-6 md:px-10 lg:px-24 py-12 bg-[#F9F7F3] min-h-screen">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg grid grid-cols-1 md:grid-cols-2 gap-10 p-6 md:p-10">
 
-        {/* IMAGE */}
         <div className="relative flex items-center justify-center bg-gray-100 rounded-lg p-6">
 
-          {/* 🔴 OFFER LABEL */}
           {hasOffer && (
             <span
               className="
@@ -81,7 +79,6 @@ export default function ProductSingleDetails() {
           />
         </div>
 
-        {/* DETAILS */}
         <div className="flex flex-col">
           <p className="text-sm text-gray-500 mb-1">
             {product.brand}
@@ -91,7 +88,6 @@ export default function ProductSingleDetails() {
             {product.name}
           </h1>
 
-          {/* 💰 PRICE */}
           {hasOffer ? (
             <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl font-bold text-pink-600">
@@ -111,7 +107,6 @@ export default function ProductSingleDetails() {
             {product.des}
           </p>
 
-          {/* SIZE */}
           <div className="mb-6">
             <p className="text-sm font-medium mb-2">Select Size</p>
             <div className="flex gap-2">
@@ -132,7 +127,6 @@ export default function ProductSingleDetails() {
             </div>
           </div>
 
-          {/* QUANTITY */}
           <div className="flex items-center gap-4 mb-8">
             <span className="text-sm font-medium">Quantity</span>
             <div className="flex items-center border rounded">
@@ -152,7 +146,6 @@ export default function ProductSingleDetails() {
             </div>
           </div>
 
-          {/* ADD TO CART */}
           <button
             onClick={handleAddToCart}
             className="

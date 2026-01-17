@@ -3,10 +3,8 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-gray-300">
-      {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Quick Links */}
           <div>
             <h3 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">
               Quick Links
@@ -35,7 +33,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">
               Company
@@ -64,7 +61,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Support */}
           <div>
             <h3 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">
               Support
@@ -82,7 +78,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Newsletter */}
           <div>
             <h3 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">
               Stay Connected
@@ -104,7 +99,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

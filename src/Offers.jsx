@@ -25,7 +25,7 @@ export default function Offers() {
   return (
     <section className="px-6 md:px-24 py-16 bg-[#F9F7F3] min-h-screen">
       <h1 className="text-3xl font-semibold mb-10">
-        🔥 Sale & Offers
+         Sale & Offers
       </h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">

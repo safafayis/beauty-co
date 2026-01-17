@@ -10,7 +10,6 @@ export default function Cart() {
   const { placeOrder } = useContext(OrderContext);
   const navigate = useNavigate();
 
-  // EMPTY CART
   if (cart.length === 0) {
     return (
       <section className="min-h-[70vh] flex flex-col items-center justify-center bg-[#F9F7F3] px-6">
@@ -38,17 +37,14 @@ export default function Cart() {
       </h1>
 
       <div className="grid md:grid-cols-3 gap-10">
-        {/* CART ITEMS */}
         <div className="md:col-span-2 space-y-6">
           {cart.map((item) => (
             <div
               key={item.cartItemId}
               className="flex flex-col sm:flex-row gap-4 bg-white p-4 rounded-lg shadow-sm"
             >
-              {/* IMAGE */}
               <div className="relative w-24 h-24 bg-gray-100 rounded flex items-center justify-center">
                 
-                {/* 🔴 OFFER LABEL */}
                 {item.offer === true && (
                   <span
                     className="
@@ -75,7 +71,6 @@ export default function Cart() {
                 />
               </div>
 
-              {/* DETAILS */}
               <div className="flex-1">
                 <h3 className="font-medium">
                   {item.name}
@@ -93,7 +88,6 @@ export default function Cart() {
                   {item.size}
                 </p>
 
-                {/* QUANTITY */}
                 <div className="flex items-center gap-3 mt-3">
                   <button
                     onClick={() =>
@@ -117,7 +111,6 @@ export default function Cart() {
                 </div>
               </div>
 
-              {/* REMOVE */}
               <button
                 onClick={() => removeFromCart(item.cartItemId)}
                 className="text-sm text-red-500 hover:underline self-start sm:self-center"
@@ -128,7 +121,6 @@ export default function Cart() {
           ))}
         </div>
 
-        {/* ORDER SUMMARY */}
         <div className="bg-white p-6 rounded-lg shadow-sm h-fit sticky top-24">
           <h2 className="text-lg font-semibold mb-4">
             Order Summary
@@ -153,7 +145,6 @@ export default function Cart() {
             <span>₹{totalPrice}</span>
           </div>
 
-          {/* PAYMENT */}
           <button
             onClick={() => navigate("/payment")}
             className="w-full bg-pink-600 text-white py-3 rounded hover:bg-pink-700 transition"

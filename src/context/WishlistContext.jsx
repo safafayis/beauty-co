@@ -6,7 +6,6 @@ export function WishlistProvider({ children }) {
   const [wishlist, setWishlist] = useState([]);
   const [user, setUser] = useState(null);
 
-  // Load user + wishlist
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -31,7 +30,6 @@ export function WishlistProvider({ children }) {
     setUser(updatedUser);
   };
 
-  // ❤️ ADD / REMOVE TOGGLE
   const toggleWishlist = (product) => {
     if (!user) return alert("Please login first");
 

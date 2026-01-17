@@ -9,11 +9,9 @@ export default function Sales() {
   useEffect(() => {
     axios.get("http://localhost:3000/products")
       .then((res) => {
-        // flatten all categories → products
         const allProducts = Object.values(res.data)
           .flatMap((cat) => Object.values(cat).flat());
 
-        // filter only offer products
         const offersOnly = allProducts.filter(
           (product) => product.offer === true
         );
@@ -38,7 +36,6 @@ export default function Sales() {
   return (
     <section className="px-6 sm:px-10 lg:px-24 py-16 bg-[#F9F7F3] min-h-screen">
       
-      {/* PAGE TITLE */}
       <div className="mb-10">
         <h1 className="text-3xl sm:text-4xl font-semibold text-pink-700">
           Sales
@@ -48,7 +45,6 @@ export default function Sales() {
         </p>
       </div>
 
-      {/* EMPTY STATE */}
       {saleProducts.length === 0 ? (
         <p className="text-center text-gray-600">
           No sale products available right now.

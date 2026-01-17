@@ -23,26 +23,22 @@ export default function Profile() {
     addressType: "home"
   });
 
-  /* ================= LOAD EXISTING ADDRESS ================= */
   useEffect(() => {
     if (user?.address) {
       setAddress(user.address);
     }
   }, [user]);
 
-  /* ================= LOGOUT ================= */
   const handleLogout = () => {
     logout();
     navigate("/login");
   };
 
-  /* ================= ADDRESS CHANGE ================= */
   const handleAddressChange = (e) => {
     const { name, value } = e.target;
     setAddress(prev => ({ ...prev, [name]: value }));
   };
 
-  /* ================= SAVE ADDRESS ================= */
   const handleSubmit = async () => {
     try {
       await axios.patch(`http://localhost:3000/users/${user.id}`, {
@@ -56,7 +52,7 @@ export default function Profile() {
     }
   };
 
-  /* ================= NOT LOGGED IN ================= */
+  
   if (!user) {
     return (
       <section className="min-h-screen flex items-center justify-center bg-[#F9F7F3]">
@@ -73,13 +69,13 @@ export default function Profile() {
     );
   }
 
-  /* ================= LOGGED IN ================= */
+  
   return (
     <section className="px-4 sm:px-10 md:px-24 py-12 bg-[#F9F7F3] min-h-screen">
       <h1 className="text-3xl font-semibold mb-8">My Profile</h1>
 
       <div className="grid md:grid-cols-3 gap-8">
-        {/* ================= LEFT ================= */}
+       
         <div className="bg-white rounded-xl p-6 shadow-sm">
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 rounded-full bg-pink-200 flex items-center justify-center text-xl font-semibold">
@@ -109,9 +105,7 @@ export default function Profile() {
           </div>
         </div>
 
-        {/* ================= RIGHT ================= */}
         <div className="md:col-span-2 space-y-6">
-          {/* ================= ACCOUNT ================= */}
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <h3 className="font-medium text-lg mb-4">Account Details</h3>
             <div className="grid sm:grid-cols-2 gap-4 text-sm">
@@ -122,7 +116,6 @@ export default function Profile() {
             </div>
           </div>
 
-          {/* ================= ADDRESS ================= */}
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex justify-between items-center mb-4">
               <h3 className="font-medium text-lg">Address</h3>
@@ -133,7 +126,6 @@ export default function Profile() {
               )}
             </div>
 
-            {/* VIEW MODE */}
             {user.address && !isEditing ? (
               <div className="text-sm space-y-2">
                 <p>{user.address.fullName}</p>
@@ -147,7 +139,7 @@ export default function Profile() {
                 <p className="capitalize">Type: {user.address.addressType}</p>
               </div>
             ) : (
-              /* EDIT / ADD MODE */
+              
               <form
                 className="space-y-4"
                 onSubmit={(e) => {

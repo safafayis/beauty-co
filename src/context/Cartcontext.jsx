@@ -1,75 +1,3 @@
-// import { createContext, useState } from "react";
-
-// export const CartContext = createContext();
-
-// export function CartProvider({ children }) {
-//   // 1️⃣ CART STATE
-//   const [cart, setCart] = useState([]);
-
-//   // 2️⃣ ADD TO CART
-//   const addToCart = (product) => {
-//     setCart((prevCart) => {
-//       const existing = prevCart.find(
-//         (item) => item.id === product.id
-//       );
-
-//       if (existing) {
-//         return prevCart.map((item) =>
-//           item.id === product.id
-//             ? { ...item, qty: item.qty + 1 }
-//             : item
-//         );
-//       }
-
-//       return [...prevCart, { ...product, qty: 1 }];
-//     });
-//   };
-
-//   // 3️⃣ REMOVE FROM CART
-//   const removeFromCart = (id) => {
-//     setCart((prevCart) =>
-//       prevCart.filter((item) => item.id !== id)
-//     );
-//   };
-
-//   // 4️⃣ UPDATE QUANTITY
-//   const updateQty = (id, qty) => {
-//     if (qty < 1) return;
-
-//     setCart((prevCart) =>
-//       prevCart.map((item) =>
-//         item.id === id ? { ...item, qty } : item
-//       )
-//     );
-//   };
-
-//   // 5️⃣ CLEAR CART (OPTIONAL)
-//   const clearCart = () => {
-//     setCart([]);
-//   };
-
-//   // 6️⃣ TOTAL PRICE (OPTIONAL)
-//   const totalPrice = cart.reduce(
-//     (sum, item) => sum + item.price * item.qty,
-//     0
-//   );
-
-//   return (
-//     <CartContext.Provider
-//       value={{
-//         cart,
-//         addToCart,
-//         removeFromCart,
-//         updateQty,
-//         clearCart,
-//         totalPrice
-//       }}
-//     >
-//       {children}
-//     </CartContext.Provider>
-//   );
-// }
-
 import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
@@ -78,7 +6,13 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState(null);
 
-  // Load user from localStorage
+  const getPriceBySize = (basePrice, size) => {
+  if (size === "100ml") return basePrice + 100;
+  if (size === "150ml") return basePrice + 200;
+  return basePrice; // 50ml
+};
+
+
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -98,7 +32,6 @@ export function CartProvider({ children }) {
         body: JSON.stringify({ cart: updatedCart })
       });
 
-      // keep localStorage in sync
       const updatedUser = { ...user, cart: updatedCart };
       localStorage.setItem("user", JSON.stringify(updatedUser));
       setUser(updatedUser);
@@ -107,23 +40,66 @@ export function CartProvider({ children }) {
     }
   };
 
- const addToCart = (product) => {
+//  const addToCart = (product) => {
+//   if (!user) return alert("Please login first");
+
+//   const hasOffer = product.offer === true;
+//   const finalPrice = hasOffer
+//     ? Math.round(product.price * 0.8)
+//     : product.price;
+
+//   setCart((prev) => {
+//     const existing = prev.find(
+//       (i) => i.id === product.id && i.size === product.size
+//     );
+
+//     const updatedCart = existing
+//       ? prev.map((i) =>
+//           i.id === product.id && i.size === product.size
+//             ? { ...i, qty: i.qty + (product.qty ?? 1) }
+//             : i
+//         )
+//       : [
+//           ...prev,
+//           {
+//             ...product,
+//             price: finalPrice,      
+//             qty: product.qty ?? 1,  
+//             cartItemId: crypto.randomUUID(),
+//           }
+//         ];
+
+//     syncCartToDB(updatedCart);
+//     return updatedCart;
+//   });
+// };
+
+const addToCart = (product) => {
   if (!user) return alert("Please login first");
 
-  // ✅ CENTRALIZED OFFER LOGIC
-  const hasOffer = product.offer === true;
-  const finalPrice = hasOffer
-    ? Math.round(product.price * 0.8)
-    : product.price;
+  // 🔹 size based price
+  const sizePrice = getPriceBySize(
+    product.price,
+    product.size
+  );
+
+  // 🔹 apply offer after size price
+  const finalPrice =
+    product.offer === true
+      ? Math.round(sizePrice * 0.8)
+      : sizePrice;
 
   setCart((prev) => {
     const existing = prev.find(
-      (i) => i.id === product.id && i.size === product.size
+      (i) =>
+        i.id === product.id &&
+        i.size === product.size
     );
 
     const updatedCart = existing
       ? prev.map((i) =>
-          i.id === product.id && i.size === product.size
+          i.id === product.id &&
+          i.size === product.size
             ? { ...i, qty: i.qty + (product.qty ?? 1) }
             : i
         )
@@ -131,10 +107,10 @@ export function CartProvider({ children }) {
           ...prev,
           {
             ...product,
-            price: finalPrice,      // ✅ ALWAYS correct
-            qty: product.qty ?? 1,  // ✅ respects qty from details page
+            price: finalPrice,
+            qty: product.qty ?? 1,
             cartItemId: crypto.randomUUID(),
-          }
+          },
         ];
 
     syncCartToDB(updatedCart);
