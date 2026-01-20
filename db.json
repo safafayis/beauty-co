@@ -6,6 +6,8 @@
         "name": "safa",
         "email": "safafayis27@gmail.com",
         "password": "safafayis",
+        "role": "user",
+        "blocked": false,
         "cart": [
           {
             "id": 101,
@@ -46,6 +48,7 @@
           {
             "id": "1539aa33-def2-4df0-8f16-f9d76d0f5c49",
             "userId": "2afd",
+            "role": "user",
             "items": [
               {
                 "id": 203,
@@ -93,6 +96,7 @@
         {
           "id": "e36ac7c4-4d30-4a0e-ae7d-b0e4e7530182",
           "userId": "2afd",
+          "role": "user",
           "items": [
             {
               "id": 201,
@@ -113,6 +117,7 @@
         {
           "id": "9e2ee4c4-4ad7-4c59-bff3-ffd2c81f415b",
           "userId": "2afd",
+          "role": "user",
           "items": [
             {
               "id": 801,
@@ -133,6 +138,7 @@
         {
           "id": "d251fa75-658f-4dfd-9a36-e35e45933dc2",
           "userId": "2afd",
+          "role": "user",
           "items": [
             {
               "id": 202,
@@ -178,6 +184,7 @@
         {
           "id": "d9d40b14-a135-4b05-995a-e826c99c3590",
           "userId": "2afd",
+          "role": "user",
           "items": [
             {
               "id": 601,
@@ -209,6 +216,7 @@
         {
           "id": "1b6c4f53-63b4-4d55-9b05-913df3866485",
           "userId": "2afd",
+          "role": "user",
           "items": [
             {
               "id": 101,
@@ -230,6 +238,7 @@
         {
           "id": "3e755d2c-a54a-4f70-baec-5d9e3d0d71e5",
           "userId": "2afd",
+          "role": "user",
           "items": [
             {
               "id": 102,
@@ -251,6 +260,7 @@
         {
           "id": "9ef05714-c61e-4232-8c45-7c1d1898783b",
           "userId": "2afd",
+          "role": "user",
           "items": [
             {
               "id": 601,
@@ -302,6 +312,7 @@
       "id": "07f2bd9f-7f9a-43d9-bca1-65ab4d5421b7",
       "user": {
         "name": "adil",
+        "role": "user",
         "email": "adil@gmail.com",
         "password": "123",
         "cart": [],
@@ -323,7 +334,16 @@
         "wishlist": [],
         "orders": []
       },
-      "address": {},
+      "address": {
+        "fullName": "safa",
+        "phoneNumber": "90767434214",
+        "pincode": "975446",
+        "state": "kerala",
+        "city": "Mallapuram",
+        "houseNo": "kinfra",
+        "roadName": "kakkanchery",
+        "addressType": "work"
+      },
       "cart": [],
       "orders": [],
       "wishlist": [
@@ -337,6 +357,49 @@
           "offer": true
         }
       ]
+    },
+    {
+      "id": "dac9fcca-a24c-40f3-9a48-1b15d7a91b5f",
+      "user": {
+        "name": "safa",
+        "email": "nothing@gmail.com",
+        "password": "123456",
+        "cart": [],
+        "wishlist": [],
+        "orders": [],
+        "role": "user"
+      },
+      "address": {},
+      "cart": [],
+      "orders": [],
+      "wishlist": []
+    },
+    {
+      "id": "8bb355c0-108d-4efa-b3f6-d1f17de8bc60",
+      "user": {
+        "name": "afthab",
+        "email": "afthab@gmail.com",
+        "password": "123456",
+        "cart": [],
+        "wishlist": [],
+        "orders": [],
+        "role": "user",
+        "blocked": false
+      },
+      "address": {},
+      "cart": [],
+      "orders": [],
+      "wishlist": []
+    },
+    {
+      "id": "1",
+      "user": {
+        "name": "Admin",
+        "email": "admin@gmail.com",
+        "password": "admin123",
+        "role": "admin",
+        "blocked": false
+      }
     }
   ],
   "products": {

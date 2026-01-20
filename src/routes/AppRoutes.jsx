@@ -15,6 +15,15 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Profile from "../pages/profile";
 import ProtectedRoute from "./protectRoute";
+import AdminProtectedRoute from "../Admin/AdminProtectedRoute";
+// import { Route } from "react-router-dom";
+import AdminLayout from "../Admin/AdminLayout";
+import AdminDashboard from "../Admin/Dashboard";
+import AdminProducts from "../Admin/ProductManagement";
+import AdminUsers from "../Admin/UserManagement";
+import AdminOrders from "../Admin/OrderManagement";
+
+
 
 export default function AppRoutes() {
   return (
@@ -56,8 +65,6 @@ export default function AppRoutes() {
       <Route path="/product/:id" element={<ProductSingleDetails />} />
       <Route path="/sales" element={<Sales />} />
       <Route path="/search" element={<Search />} />
-
-      {/* 🔐 PROTECTED ROUTES */}
       <Route
         path="/profile"
         element={
@@ -103,7 +110,16 @@ export default function AppRoutes() {
         }
       />
 
-      {/* 🔓 PUBLIC ROUTES */}
+           <Route element={<AdminProtectedRoute />}>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="products" element={<AdminProducts />} />
+          <Route path="users" element={<AdminUsers />} />
+          <Route path="orders" element={<AdminOrders />} />
+        </Route>
+      </Route>
+
+
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
     </Routes>

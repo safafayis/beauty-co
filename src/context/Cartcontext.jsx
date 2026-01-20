@@ -9,7 +9,7 @@ export function CartProvider({ children }) {
   const getPriceBySize = (basePrice, size) => {
   if (size === "100ml") return basePrice + 100;
   if (size === "150ml") return basePrice + 200;
-  return basePrice; // 50ml
+  return basePrice; 
 };
 
 
@@ -77,13 +77,12 @@ export function CartProvider({ children }) {
 const addToCart = (product) => {
   if (!user) return alert("Please login first");
 
-  // 🔹 size based price
+  
   const sizePrice = getPriceBySize(
     product.price,
     product.size
   );
 
-  // 🔹 apply offer after size price
   const finalPrice =
     product.offer === true
       ? Math.round(sizePrice * 0.8)

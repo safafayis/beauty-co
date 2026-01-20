@@ -32,10 +32,13 @@ export default function Register() {
 
   try {
     const existing = await axios.get(
-      `http://localhost:3000/users?user.email=${form.email}`
+      `http://localhost:3000/users?email=${form.email}`
     );
 
-    if (existing.data.length > 0) {
+    const res = existing.data.filter(user => user.user.email === form.email)
+    
+    
+    if (res.length) {
       setError("Email already registered");
       return;
     }
@@ -48,7 +51,9 @@ export default function Register() {
         password: form.password,
         cart: [],
         wishlist: [],
-        orders: []
+        orders: [],
+        role: 'user',
+        blocked: false
       },
       address: {},
       cart: [],
