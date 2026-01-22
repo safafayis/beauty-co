@@ -1,0 +1,1007 @@
+{
+  "users": [
+    {
+      "user": {
+        "id": "2afd",
+        "name": "safa",
+        "email": "safafayis27@gmail.com",
+        "password": "safafayis",
+        "role": "user",
+        "blocked": false,
+        "cart": [
+          {
+            "id": 101,
+            "name": "Creamy Matte Lipstick",
+            "brand": "Lakme",
+            "price": 299,
+            "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
+            "des": "A creamy matte lipstick with intense color payoff.",
+            "size": "50ml",
+            "qty": 4,
+            "cartItemId": "4d649c05-4838-4637-a20e-ca025e9b2c0c"
+          },
+          {
+            "id": 601,
+            "name": "Gentle Skin Cleanser",
+            "brand": "Cetaphil",
+            "price": 349,
+            "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+            "des": "Mild cleanser for sensitive skin.",
+            "size": "50ml",
+            "qty": 1,
+            "cartItemId": "a092c8f6-da42-4afd-8c8c-f29f017f8a65"
+          },
+          {
+            "id": 201,
+            "name": "Colossal Eyeliner",
+            "brand": "Maybelline",
+            "price": 299,
+            "img": "https://i.pinimg.com/736x/4b/d6/d1/4bd6d164928772c2fbf8b3a3780db743.jpg",
+            "des": "Deep black eyeliner with smooth application.",
+            "size": "50ml",
+            "qty": 1,
+            "cartItemId": "80aa8b95-941b-4194-9849-b3ddb0e78361"
+          }
+        ],
+        "wishlist": [],
+        "orders": [
+          {
+            "id": "1539aa33-def2-4df0-8f16-f9d76d0f5c49",
+            "userId": "2afd",
+            "role": "user",
+            "items": [
+              {
+                "id": 203,
+                "name": "Epic Ink Liner",
+                "brand": "NYX",
+                "price": 799,
+                "img": "https://i.pinimg.com/1200x/dd/c0/e0/ddc0e018fee54c081c356ffe15bc0335.jpg",
+                "des": "Waterproof eyeliner with flexible brush.",
+                "size": "150ml",
+                "qty": 1,
+                "cartItemId": "311a372b-a3af-4258-959c-58688d4f10ea"
+              }
+            ],
+            "total": 799,
+            "status": "Placed",
+            "createdAt": "2026-01-14T12:57:51.959Z"
+          }
+        ]
+      },
+      "address": {
+        "fullName": "uhdsf",
+        "phoneNumber": "090767434214",
+        "pincode": "975446",
+        "state": "kerala",
+        "city": "kannur",
+        "houseNo": "kinfra",
+        "roadName": "kakkanchery",
+        "addressType": "home"
+      },
+      "id": "2afd",
+      "cart": [
+        {
+          "id": 103,
+          "name": "Powder Kiss Lipstick",
+          "brand": "MAC",
+          "price": 2550,
+          "img": "https://i.pinimg.com/1200x/41/52/f7/4152f73e54d41838c59309d66d31f841.jpg",
+          "des": "Soft-focus matte lipstick with cushiony texture.",
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "3c344c70-45b4-40a0-ae26-139863ce62bc"
+        }
+      ],
+      "orders": [
+        {
+          "id": "e36ac7c4-4d30-4a0e-ae7d-b0e4e7530182",
+          "userId": "2afd",
+          "role": "user",
+          "items": [
+            {
+              "id": 201,
+              "name": "Colossal Eyeliner",
+              "brand": "Maybelline",
+              "price": 299,
+              "img": "https://i.pinimg.com/736x/4b/d6/d1/4bd6d164928772c2fbf8b3a3780db743.jpg",
+              "des": "Deep black eyeliner with smooth application.",
+              "size": "50ml",
+              "qty": 1,
+              "cartItemId": "305bbbc9-f73d-4293-8659-e95f0c9bfd7f"
+            }
+          ],
+          "total": 299,
+          "status": "Placed",
+          "createdAt": "2026-01-15T06:00:08.665Z"
+        },
+        {
+          "id": "9e2ee4c4-4ad7-4c59-bff3-ffd2c81f415b",
+          "userId": "2afd",
+          "role": "user",
+          "items": [
+            {
+              "id": 801,
+              "name": "Luxury Perfume Gift Set",
+              "brand": "Bella Vita",
+              "price": 999,
+              "img": "https://i.pinimg.com/1200x/87/08/96/870896d40d420e7e2fd566f54d408156.jpg",
+              "des": "Premium perfume gift set.",
+              "size": "50ml",
+              "qty": 1,
+              "cartItemId": "77e81602-28ad-42e1-bc5c-9b8f4791ed3f"
+            }
+          ],
+          "total": 999,
+          "status": "Placed",
+          "createdAt": "2026-01-15T08:56:13.592Z"
+        },
+        {
+          "id": "d251fa75-658f-4dfd-9a36-e35e45933dc2",
+          "userId": "2afd",
+          "role": "user",
+          "items": [
+            {
+              "id": 202,
+              "name": "Eyeconic Liner",
+              "brand": "Lakme",
+              "price": 260,
+              "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
+              "des": "Water-resistant liquid eyeliner.",
+              "offer": true,
+              "size": "50ml",
+              "qty": 1,
+              "cartItemId": "fe0ceaa4-68db-4d41-a673-3c7579e79fe9"
+            },
+            {
+              "id": 304,
+              "name": "Mask Fit All Cover Pink Cushion Foundation",
+              "brand": "TIRTIR",
+              "price": 1999,
+              "img": "https://i.pinimg.com/1200x/8a/42/79/8a4279d6980dcf3e9ad9a8d45038cce7.jpg",
+              "des": "A high-coverage cushion foundation designed to stay put under masks.",
+              "offer": true,
+              "size": "150ml",
+              "qty": 1,
+              "cartItemId": "25f226cd-1a2a-4fe5-aa5f-69f055426d4e"
+            },
+            {
+              "id": 101,
+              "name": "Creamy Matte Lipstick",
+              "brand": "Lakme",
+              "price": 239,
+              "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
+              "des": "A creamy matte lipstick with intense color payoff.",
+              "offer": true,
+              "size": "50ml",
+              "qty": 2,
+              "cartItemId": "12404d0e-3dbe-4c48-bca9-e95eaa615ef9"
+            }
+          ],
+          "total": 2737,
+          "status": "Placed",
+          "createdAt": "2026-01-15T15:11:55.718Z"
+        },
+        {
+          "id": "d9d40b14-a135-4b05-995a-e826c99c3590",
+          "userId": "2afd",
+          "role": "user",
+          "items": [
+            {
+              "id": 601,
+              "name": "Gentle Skin Cleanser",
+              "brand": "Cetaphil",
+              "price": 349,
+              "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+              "des": "Mild cleanser for sensitive skin.",
+              "size": "100ml",
+              "qty": 1,
+              "cartItemId": "b605b294-2ecc-4d82-8530-9f83b2e9d437"
+            },
+            {
+              "id": 601,
+              "name": "Gentle Skin Cleanser",
+              "brand": "Cetaphil",
+              "price": 349,
+              "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+              "des": "Mild cleanser for sensitive skin.",
+              "size": "50ml",
+              "qty": 1,
+              "cartItemId": "9839a995-1c38-41b5-98bf-d0ca9ae48d58"
+            }
+          ],
+          "total": 698,
+          "status": "Placed",
+          "createdAt": "2026-01-15T15:32:49.016Z"
+        },
+        {
+          "id": "1b6c4f53-63b4-4d55-9b05-913df3866485",
+          "userId": "2afd",
+          "role": "user",
+          "items": [
+            {
+              "id": 101,
+              "name": "Creamy Matte Lipstick",
+              "brand": "Lakme",
+              "price": 239,
+              "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
+              "des": "A creamy matte lipstick with intense color payoff.",
+              "offer": true,
+              "size": "100ml",
+              "qty": 2,
+              "cartItemId": "db3f23e5-0788-45af-b622-4407cbcfceab"
+            }
+          ],
+          "total": 478,
+          "status": "Placed",
+          "createdAt": "2026-01-16T12:32:28.156Z"
+        },
+        {
+          "id": "3e755d2c-a54a-4f70-baec-5d9e3d0d71e5",
+          "userId": "2afd",
+          "role": "user",
+          "items": [
+            {
+              "id": 102,
+              "name": "Color Sensational Matte",
+              "brand": "Maybelline",
+              "price": 319,
+              "img": "https://i.pinimg.com/736x/a2/cc/5f/a2cc5f64767ec2fa0b1213f1b72e2b63.jpg",
+              "des": "Highly pigmented matte lipstick enriched with oils.",
+              "offer": true,
+              "size": "100ml",
+              "qty": 2,
+              "cartItemId": "57dae233-3d25-4697-b6cc-2fbb6fd35030"
+            }
+          ],
+          "total": 638,
+          "status": "Placed",
+          "createdAt": "2026-01-17T03:56:07.771Z"
+        },
+        {
+          "id": "9ef05714-c61e-4232-8c45-7c1d1898783b",
+          "userId": "2afd",
+          "role": "user",
+          "items": [
+            {
+              "id": 601,
+              "name": "Gentle Skin Cleanser",
+              "brand": "Cetaphil",
+              "price": 349,
+              "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+              "des": "Mild cleanser for sensitive skin.",
+              "size": "50ml",
+              "qty": 1,
+              "cartItemId": "84e35559-01b8-4402-99af-fe6c37def960"
+            }
+          ],
+          "total": 349,
+          "status": "Placed",
+          "createdAt": "2026-01-17T04:11:24.732Z"
+        }
+      ],
+      "wishlist": [
+        {
+          "id": 101,
+          "name": "Creamy Matte Lipstick",
+          "brand": "Lakme",
+          "price": 299,
+          "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
+          "des": "A creamy matte lipstick with intense color payoff.",
+          "offer": true
+        },
+        {
+          "id": 102,
+          "name": "Color Sensational Matte",
+          "brand": "Maybelline",
+          "price": 399,
+          "img": "https://i.pinimg.com/736x/a2/cc/5f/a2cc5f64767ec2fa0b1213f1b72e2b63.jpg",
+          "des": "Highly pigmented matte lipstick enriched with oils.",
+          "offer": true
+        },
+        {
+          "id": 806,
+          "name": "Warm Vanilla Sugar Gift Set",
+          "brand": "Bath & Body Works",
+          "price": 2399,
+          "img": "https://i.pinimg.com/1200x/fd/af/e5/fdafe50e3889ecf62adbdaf98b98c77c.jpg",
+          "des": "Vanilla scented bath set."
+        }
+      ]
+    },
+    {
+      "id": "07f2bd9f-7f9a-43d9-bca1-65ab4d5421b7",
+      "user": {
+        "name": "adil",
+        "role": "user",
+        "email": "adil@gmail.com",
+        "password": "123",
+        "cart": [],
+        "wishlist": [],
+        "orders": []
+      },
+      "address": {},
+      "cart": [],
+      "orders": [],
+      "wishlist": []
+    },
+    {
+      "id": "2809778d-6402-4076-911d-e8b9be576828",
+      "user": {
+        "name": "rana",
+        "email": "rana@gamil.com",
+        "password": "12345",
+        "cart": [],
+        "wishlist": [],
+        "orders": []
+      },
+      "address": {
+        "fullName": "safa",
+        "phoneNumber": "90767434214",
+        "pincode": "975446",
+        "state": "kerala",
+        "city": "Mallapuram",
+        "houseNo": "kinfra",
+        "roadName": "kakkanchery",
+        "addressType": "work"
+      },
+      "cart": [],
+      "orders": [],
+      "wishlist": [
+        {
+          "id": 202,
+          "name": "Eyeconic Liner",
+          "brand": "Lakme",
+          "price": 325,
+          "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
+          "des": "Water-resistant liquid eyeliner.",
+          "offer": true
+        }
+      ]
+    },
+    {
+      "id": "dac9fcca-a24c-40f3-9a48-1b15d7a91b5f",
+      "user": {
+        "name": "safa",
+        "email": "nothing@gmail.com",
+        "password": "123456",
+        "cart": [],
+        "wishlist": [],
+        "orders": [],
+        "role": "user"
+      },
+      "address": {},
+      "cart": [],
+      "orders": [],
+      "wishlist": []
+    },
+    {
+      "id": "8bb355c0-108d-4efa-b3f6-d1f17de8bc60",
+      "user": {
+        "name": "afthab",
+        "email": "afthab@gmail.com",
+        "password": "123456",
+        "cart": [],
+        "wishlist": [],
+        "orders": [],
+        "role": "user",
+        "blocked": false
+      },
+      "address": {},
+      "cart": [],
+      "orders": [],
+      "wishlist": []
+    },
+    {
+      "id": "1",
+      "user": {
+        "name": "Admin",
+        "email": "admin@gmail.com",
+        "password": "admin123",
+        "role": "admin",
+        "blocked": false
+      }
+    }
+  ],
+  "products": {
+    "lips": {
+      "matte": [
+        {
+          "id": 101,
+          "name": "Creamy Matte Lipstick",
+          "brand": "Lakme",
+          "price": 299,
+          "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
+          "des": "A creamy matte lipstick with intense color payoff.",
+          "offer": true
+        },
+        {
+          "id": 102,
+          "name": "Color Sensational Matte",
+          "brand": "Maybelline",
+          "price": 399,
+          "img": "https://i.pinimg.com/736x/a2/cc/5f/a2cc5f64767ec2fa0b1213f1b72e2b63.jpg",
+          "des": "Highly pigmented matte lipstick enriched with oils.",
+          "offer": true
+        },
+        {
+          "id": 103,
+          "name": "Powder Kiss Lipstick",
+          "brand": "MAC",
+          "price": 2550,
+          "img": "https://i.pinimg.com/1200x/41/52/f7/4152f73e54d41838c59309d66d31f841.jpg",
+          "des": "Soft-focus matte lipstick with cushiony texture."
+        },
+        {
+          "id": 104,
+          "name": "Power Bullet Matte",
+          "brand": "Huda Beauty",
+          "price": 1950,
+          "img": "https://i.pinimg.com/1200x/56/cf/b1/56cfb1187ead01b4ffd775f049bc52ef.jpg",
+          "des": "Ultra-pigmented matte lipstick."
+        }
+      ],
+      "liquid": [
+        {
+          "id": 105,
+          "name": "Lip Lingerie",
+          "brand": "NYX",
+          "price": 799,
+          "img": "https://i.pinimg.com/736x/7d/97/bd/7d97bdf0dd757646a7eaf961e4eef6b7.jpg",
+          "des": "Lightweight liquid lipstick with smooth matte finish.",
+          "offer": true
+        },
+        {
+          "id": 106,
+          "name": "Rouge Signature",
+          "brand": "L'Oréal",
+          "price": 699,
+          "img": "https://i.pinimg.com/1200x/a6/28/a7/a628a78f6dff8d60597494dacaf54e96.jpg",
+          "des": "Ultra-light liquid lipstick with intense color.",
+          "offer": true
+        },
+        {
+          "id": 107,
+          "name": "Stunna Lip Paint",
+          "brand": "Fenty Beauty",
+          "price": 2300,
+          "img": "https://i.pinimg.com/736x/be/0d/66/be0d66c340a02b051be11198be3b7dfd.jpg",
+          "des": "Long-wearing liquid lipstick with full coverage."
+        },
+        {
+          "id": 108,
+          "name": "Liquid Matte Lipstick",
+          "brand": "Huda Beauty",
+          "price": 2100,
+          "img": "https://i.pinimg.com/1200x/78/7f/8a/787f8a568dc26f620944688df8198c78.jpg",
+          "des": "Richly pigmented liquid matte lipstick."
+        }
+      ]
+    },
+    "eyes": {
+      "eyeliner": [
+        {
+          "id": 201,
+          "name": "Colossal Eyeliner",
+          "brand": "Maybelline",
+          "price": 299,
+          "img": "https://i.pinimg.com/736x/4b/d6/d1/4bd6d164928772c2fbf8b3a3780db743.jpg",
+          "des": "Deep black eyeliner with smooth application."
+        },
+        {
+          "id": 202,
+          "name": "Eyeconic Liner",
+          "brand": "Lakme",
+          "price": 325,
+          "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
+          "des": "Water-resistant liquid eyeliner.",
+          "offer": true
+        },
+        {
+          "id": 203,
+          "name": "Epic Ink Liner",
+          "brand": "NYX",
+          "price": 799,
+          "img": "https://i.pinimg.com/1200x/dd/c0/e0/ddc0e018fee54c081c356ffe15bc0335.jpg",
+          "des": "Waterproof eyeliner with flexible brush."
+        },
+        {
+          "id": 204,
+          "name": "Auto Gel Eyeliner",
+          "brand": "Etude",
+          "price": 990,
+          "img": "https://i.pinimg.com/1200x/48/57/ee/4857ee5fc6667495366b02aed51295d3.jpg",
+          "des": "Smooth gel eyeliner pencil."
+        }
+      ],
+      "mascara": [
+        {
+          "id": 205,
+          "name": "Lash Sensational",
+          "brand": "Maybelline",
+          "price": 399,
+          "img": "https://i.pinimg.com/736x/e0/c4/34/e0c434f30f15cbaa1c14dcb30f4c5181.jpg",
+          "des": "Volumizing mascara for dramatic lashes."
+        },
+        {
+          "id": 206,
+          "name": "Better Than Lashes",
+          "brand": "Too Faced",
+          "price": 2400,
+          "img": "https://i.pinimg.com/736x/18/7f/6d/187f6dbc6a80df4f091ca8638c5075e0.jpg",
+          "des": "Ultra-volumizing mascara."
+        },
+        {
+          "id": 207,
+          "name": "Roller Lash",
+          "brand": "Benefit",
+          "price": 2650,
+          "img": "https://i.pinimg.com/1200x/3e/22/b5/3e22b50e91b81e4d5f73205108857dac.jpg",
+          "des": "Curl-enhancing mascara."
+        },
+        {
+          "id": 208,
+          "name": "Curl Fix Mascara",
+          "brand": "TONYMOLY",
+          "price": 820,
+          "img": "https://i.pinimg.com/736x/ab/36/04/ab360407bc07ddfd4779c21a270610e8.jpg",
+          "des": "Lightweight curl-fix mascara."
+        }
+      ],
+      "eyeshadow": [
+        {
+          "id": 209,
+          "name": "Nude Obsessions",
+          "brand": "Huda Beauty",
+          "price": 2650,
+          "img": "https://i.pinimg.com/736x/f5/1f/c6/f51fc67581fa1f9948039d998c205a86.jpg",
+          "des": "Highly pigmented nude eyeshadow palette."
+        },
+        {
+          "id": 210,
+          "name": "Ultimate Shadow Palette",
+          "brand": "NYX",
+          "price": 1800,
+          "img": "https://i.pinimg.com/736x/4c/78/be/4c78bed82b814e97a71aa462e4b485f7.jpg",
+          "des": "Professional-quality eyeshadow palette.",
+          "offer": true
+        },
+        {
+          "id": 211,
+          "name": "Rose Gold Palette",
+          "brand": "Huda Beauty",
+          "price": 6750,
+          "img": "https://i.pinimg.com/1200x/7f/96/cd/7f96cd03ebac3a16bdc207ff61071008.jpg",
+          "des": "Luxury rose-gold inspired palette."
+        },
+        {
+          "id": 212,
+          "name": "Eyeshadow Quad",
+          "brand": "MAC",
+          "price": 3100,
+          "img": "https://i.pinimg.com/736x/74/f8/a1/74f8a1d4723d084374c9ae9bec59f089.jpg",
+          "des": "Compact eyeshadow quad."
+        }
+      ]
+    },
+    "face": {
+      "foundation": [
+        {
+          "id": 301,
+          "name": "Fit Me Matte Foundation",
+          "brand": "Maybelline",
+          "price": 549,
+          "img": "https://i.pinimg.com/1200x/08/cd/f5/08cdf572604c7b3072dbe92a948001b7.jpg",
+          "des": "A lightweight matte foundation that controls shine and provides natural-looking coverage."
+        },
+        {
+          "id": 302,
+          "name": "24H Fresh Wear",
+          "brand": "L'Oréal",
+          "price": 999,
+          "img": "https://i.pinimg.com/736x/c0/a8/99/c0a899c613ffb6c1755906d6e509d261.jpg",
+          "des": "A long-lasting foundation that delivers breathable, flawless coverage."
+        },
+        {
+          "id": 303,
+          "name": "Kill Cover Mesh Glow Cushion Foundation",
+          "brand": "CLIO",
+          "price": 2699,
+          "img": "https://i.pinimg.com/736x/32/64/8c/32648c0666854702089269707b557fc4.jpg",
+          "des": "A glow-enhancing cushion foundation with a radiant finish."
+        },
+        {
+          "id": 304,
+          "name": "Mask Fit All Cover Pink Cushion Foundation",
+          "brand": "TIRTIR",
+          "price": 2499,
+          "img": "https://i.pinimg.com/1200x/8a/42/79/8a4279d6980dcf3e9ad9a8d45038cce7.jpg",
+          "des": "A high-coverage cushion foundation designed to stay put under masks.",
+          "offer": true
+        }
+      ],
+      "concealer": [
+        {
+          "id": 305,
+          "name": "Fit Me Concealer",
+          "brand": "Maybelline",
+          "price": 299,
+          "img": "https://i.pinimg.com/736x/41/83/cc/4183cc122cc7620b5c792615bf3d6b0a.jpg",
+          "des": "A creamy concealer that hides blemishes and dark circles."
+        },
+        {
+          "id": 306,
+          "name": "Pro Conceal HD",
+          "brand": "LA Girl",
+          "price": 695,
+          "img": "https://i.pinimg.com/736x/f8/62/77/f86277c8e6fa2e0d34fa8e4526229899.jpg",
+          "des": "A high-definition concealer for flawless coverage."
+        },
+        {
+          "id": 307,
+          "name": "Double Lasting Concealer",
+          "brand": "CLIO",
+          "price": 1200,
+          "img": "https://i.pinimg.com/1200x/24/05/40/240540cc5bf351d9ee27dabc175baa4f.jpg",
+          "des": "A long-wear concealer with full coverage."
+        },
+        {
+          "id": 308,
+          "name": "Face Designing Under Eye Brightener",
+          "brand": "Etude House",
+          "price": 950,
+          "img": "https://i.pinimg.com/1200x/f9/1c/d6/f91cd6d8afd210da244f653fd535ed51.jpg",
+          "des": "An under-eye brightener that instantly refreshes the eye area."
+        }
+      ],
+      "blush": [
+        {
+          "id": 309,
+          "name": "Fit Me Blush",
+          "brand": "Maybelline",
+          "price": 399,
+          "img": "https://i.pinimg.com/1200x/d9/0a/b9/d90ab9cecc83731a532980c897863a34.jpg",
+          "des": "A natural-looking blush that blends effortlessly."
+        },
+        {
+          "id": 310,
+          "name": "Cheek Pop",
+          "brand": "Clinique",
+          "price": 2550,
+          "img": "https://i.pinimg.com/1200x/de/76/52/de76525f802e1c8258f52aaf11773cc9.jpg",
+          "des": "A silky powder blush with a radiant finish."
+        },
+        {
+          "id": 311,
+          "name": "Glow Filter Blusher",
+          "brand": "Rom&nd",
+          "price": 1350,
+          "img": "https://i.pinimg.com/1200x/67/3d/33/673d33563058a6ea00f78c518f3cb1ad.jpg",
+          "des": "A luminous blusher that adds a subtle glow."
+        },
+        {
+          "id": 312,
+          "name": "Sugar Touch Velvet Tint",
+          "brand": "3CE",
+          "price": 1500,
+          "img": "https://i.pinimg.com/736x/25/d1/9a/25d19aef91bd4d8f63d1c0cd030ac624.jpg",
+          "des": "A velvety blush tint with long-lasting color."
+        }
+      ],
+      "highlighter": [
+        {
+          "id": 313,
+          "name": "Master Chrome",
+          "brand": "Maybelline",
+          "price": 699,
+          "img": "https://i.pinimg.com/1200x/19/06/86/190686cc598dadf4cfc8fac76134ed29.jpg",
+          "des": "An intense metallic highlighter."
+        },
+        {
+          "id": 314,
+          "name": "Killawatt Highlighter",
+          "brand": "Fenty Beauty",
+          "price": 2600,
+          "img": "https://i.pinimg.com/736x/46/0b/c1/460bc1ccc2deca09e89498488a3d8db4.jpg",
+          "des": "A buildable shimmer highlighter.",
+          "offer": true
+        },
+        {
+          "id": 315,
+          "name": "Diamond Glow Highlighter",
+          "brand": "CLIO",
+          "price": 1900,
+          "img": "https://i.pinimg.com/1200x/83/88/22/838822bbba822f1bdc0ded33e44faadf.jpg",
+          "des": "A finely milled diamond glow highlighter."
+        },
+        {
+          "id": 316,
+          "name": "Star Lit Gummy Highlighter",
+          "brand": "Rom&nd",
+          "price": 1500,
+          "img": "https://i.pinimg.com/1200x/f6/6b/16/f66b16e8196fcff245bcb4f8e247dfb3.jpg",
+          "des": "A glossy jelly-textured highlighter."
+        }
+      ]
+    },
+    "nails": {
+      "nailPolish": [
+        {
+          "id": 401,
+          "name": "Color Show Nail Polish",
+          "brand": "Maybelline",
+          "price": 149,
+          "img": "https://i.pinimg.com/1200x/4d/73/87/4d738774d05d3c147cda26cf30945a1a.jpg",
+          "des": "A vibrant nail polish with glossy finish."
+        },
+        {
+          "id": 402,
+          "name": "9 to 5 Nail Color",
+          "brand": "Lakme",
+          "price": 195,
+          "img": "https://i.pinimg.com/1200x/51/2c/95/512c95c209009a3924beeb11ae79d7c1.jpg",
+          "des": "A long-lasting nail color for everyday wear."
+        },
+        {
+          "id": 403,
+          "name": "Long Wear Nail Enamel",
+          "brand": "OPI",
+          "price": 850,
+          "img": "https://i.pinimg.com/736x/d8/82/a7/d882a75b68f8084731f34dbbdd100752.jpg",
+          "des": "A premium long-wear nail enamel."
+        },
+        {
+          "id": 404,
+          "name": "Gel Finish Nail Polish",
+          "brand": "Essie",
+          "price": 950,
+          "img": "https://i.pinimg.com/1200x/d9/96/ba/d996bab89bd670ce4ebb013e904fe956.jpg",
+          "des": "A gel-like nail polish with high shine."
+        }
+      ],
+      "gelNailPolish": [
+        {
+          "id": 405,
+          "name": "Gel Couture",
+          "brand": "Essie",
+          "price": 980,
+          "img": "https://i.pinimg.com/474x/9f/46/17/9f461706aca3995b89ddf6751f8f7978.jpg",
+          "des": "A long-wearing gel nail polish."
+        },
+        {
+          "id": 406,
+          "name": "UV Gel Polish",
+          "brand": "OPI",
+          "price": 1200,
+          "img": "https://i.pinimg.com/736x/f8/db/72/f8db72472fcc269ebd8146d9a1f6b517.jpg",
+          "des": "A salon-style UV gel polish."
+        },
+        {
+          "id": 407,
+          "name": "Quick Dry Nail Lacquer",
+          "brand": "Sally Hansen",
+          "price": 780,
+          "img": "https://i.pinimg.com/1200x/24/ea/91/24ea911683bce4f7777b42f2e89c9096.jpg",
+          "des": "A fast-drying nail lacquer."
+        },
+        {
+          "id": 408,
+          "name": "Mirror Shine Gel Polish",
+          "brand": "Innisfree",
+          "price": 890,
+          "img": "https://i.pinimg.com/1200x/79/5a/64/795a643e679be5f0b706ac3799218d61.jpg",
+          "des": "A glossy gel nail polish with mirror shine."
+        }
+      ]
+    },
+    "skin": {
+      "cleanser": [
+        {
+          "id": 601,
+          "name": "Gentle Skin Cleanser",
+          "brand": "Cetaphil",
+          "price": 349,
+          "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+          "des": "Mild cleanser for sensitive skin."
+        },
+        {
+          "id": 602,
+          "name": "Low pH Cleanser",
+          "brand": "COSRX",
+          "price": 850,
+          "img": "https://i.pinimg.com/736x/83/05/48/830548899aa8f48105f333175efcfa43.jpg",
+          "des": "Low pH facial cleanser."
+        },
+        {
+          "id": 603,
+          "name": "Green Tea Cleanser",
+          "brand": "Innisfree",
+          "price": 780,
+          "img": "https://i.pinimg.com/1200x/f5/30/d6/f530d6ff26a5a2f0e2594f52e2aac9be.jpg",
+          "des": "Refreshing green tea cleanser."
+        },
+        {
+          "id": 604,
+          "name": "Radiant Skin Cleansing Gel",
+          "brand": "Etude House",
+          "price": 650,
+          "img": "https://i.pinimg.com/1200x/f9/39/0a/f9390af3a17df12c77cc829ccf846a00.jpg",
+          "des": "Gentle gel cleanser."
+        }
+      ],
+      "serum": [
+        {
+          "id": 605,
+          "name": "Niacinamide Serum",
+          "brand": "The Ordinary",
+          "price": 550,
+          "img": "https://i.pinimg.com/736x/76/94/71/7694713fdec8fe9763a526a6dcc85757.jpg",
+          "des": "Oil-balancing niacinamide serum."
+        },
+        {
+          "id": 606,
+          "name": "Alpha Arbutin Serum",
+          "brand": "Minimalist",
+          "price": 649,
+          "img": "https://i.pinimg.com/736x/4d/83/84/4d8384f138812457c83e42cb82da11d4.jpg",
+          "des": "Brightening alpha arbutin serum."
+        },
+        {
+          "id": 607,
+          "name": "Snail 96 Essence",
+          "brand": "COSRX",
+          "price": 1450,
+          "img": "https://i.pinimg.com/1200x/75/a0/c6/75a0c6928a73bac75bb5d03c9203df92.jpg",
+          "des": "Repairing snail mucin essence.",
+          "offer": true
+        },
+        {
+          "id": 608,
+          "name": "Glow Deep Serum",
+          "brand": "Beauty of Joseon",
+          "price": 1480,
+          "img": "https://i.pinimg.com/1200x/18/79/b2/1879b21463ee4aa77743d11b6eee4bef.jpg",
+          "des": "Rice + arbutin brightening serum."
+        }
+      ],
+      "moisturizer": [
+        {
+          "id": 609,
+          "name": "Water Sleeping Mask",
+          "brand": "Laneige",
+          "price": 2300,
+          "img": "https://i.pinimg.com/1200x/66/a4/7b/66a47b4d60d21a46b1080ab96696acaa.jpg",
+          "des": "Overnight hydrating mask."
+        },
+        {
+          "id": 610,
+          "name": "Hydrating Moisturizer",
+          "brand": "Cetaphil",
+          "price": 499,
+          "img": "https://i.pinimg.com/736x/5d/64/30/5d643039456dec69520e2a74be537bf8.jpg",
+          "des": "Daily gentle moisturizer."
+        },
+        {
+          "id": 611,
+          "name": "Snail Essence Moisturizer",
+          "brand": "COSRX",
+          "price": 499,
+          "img": "https://i.pinimg.com/1200x/e1/dd/8a/e1dd8a88b8b0fee07270d73149dde7d8.jpg",
+          "des": "Snail mucin repair moisturizer."
+        },
+        {
+          "id": 612,
+          "name": "Glow Moisturizer",
+          "brand": "Beauty of Joseon",
+          "price": 499,
+          "img": "https://i.pinimg.com/736x/7b/b3/56/7bb356eba9dbc258faa59e413831e49d.jpg",
+          "des": "Radiance-boosting moisturizer."
+        }
+      ],
+      "sunscreen": [
+        {
+          "id": 613,
+          "name": "Rice Sunscreen SPF50",
+          "brand": "Beauty of Joseon",
+          "price": 1450,
+          "img": "https://i.pinimg.com/1200x/1d/ad/cd/1dadcd45125d9678b8307610435c33ca.jpg",
+          "des": "Lightweight SPF50 sunscreen."
+        },
+        {
+          "id": 614,
+          "name": "Aqua Gel SPF50",
+          "brand": "Neutrogena",
+          "price": 699,
+          "img": "https://i.pinimg.com/1200x/b4/24/f0/b424f02efdd7b7f55498f85bc74d6a87.jpg",
+          "des": "Water-light sunscreen gel."
+        },
+        {
+          "id": 615,
+          "name": "Niacinamide Glow SPF50",
+          "brand": "WishCare",
+          "price": 699,
+          "img": "https://i.pinimg.com/736x/07/23/be/0723bed1e83b2f76570e907f16f83b9f.jpg",
+          "des": "Brightening SPF sunscreen."
+        },
+        {
+          "id": 616,
+          "name": "Watermelon SPF50",
+          "brand": "Dot & Key",
+          "price": 699,
+          "img": "https://i.pinimg.com/736x/f4/29/7e/f4297e1ff1e1509eb8b22e58c3829c12.jpg",
+          "des": "Refreshing watermelon sunscreen."
+        }
+      ]
+    },
+    "gifting": {
+      "perfume_box": [
+        {
+          "id": 801,
+          "name": "Luxury Perfume Gift Set",
+          "brand": "Bella Vita",
+          "price": 999,
+          "img": "https://i.pinimg.com/1200x/87/08/96/870896d40d420e7e2fd566f54d408156.jpg",
+          "des": "Premium perfume gift set."
+        },
+        {
+          "id": 802,
+          "name": "Signature Oud Gift Set",
+          "brand": "Bella Vita",
+          "price": 1299,
+          "img": "https://i.pinimg.com/736x/ae/ca/f4/aecaf41e40e93c07016b8cec641fb432.jpg",
+          "des": "Luxury oud perfume set."
+        },
+        {
+          "id": 803,
+          "name": "Fresh & Floral Collection",
+          "brand": "Bella Vita",
+          "price": 1099,
+          "img": "https://i.pinimg.com/736x/f0/89/ef/f089efdbcdc56438e214a7993324159e.jpg",
+          "des": "Floral perfume collection."
+        },
+        {
+          "id": 804,
+          "name": "Men’s Premium Fragrance Box",
+          "brand": "Bella Vita",
+          "price": 1499,
+          "img": "https://i.pinimg.com/736x/f6/5d/79/f65d79f9079e8608c57da4610c8c9e2e.jpg",
+          "des": "Men’s luxury fragrance gift box."
+        }
+      ],
+      "bath_body": [
+        {
+          "id": 805,
+          "name": "Japanese Cherry Blossom Gift Set",
+          "brand": "Bath & Body Works",
+          "price": 2499,
+          "img": "https://i.pinimg.com/1200x/24/14/81/241481c6727c4291a112af54cd9f3aeb.jpg",
+          "des": "Cherry blossom scented gift set."
+        },
+        {
+          "id": 806,
+          "name": "Warm Vanilla Sugar Gift Set",
+          "brand": "Bath & Body Works",
+          "price": 2399,
+          "img": "https://i.pinimg.com/1200x/fd/af/e5/fdafe50e3889ecf62adbdaf98b98c77c.jpg",
+          "des": "Vanilla scented bath set."
+        },
+        {
+          "id": 807,
+          "name": "A Thousand Wishes Gift Set",
+          "brand": "Bath & Body Works",
+          "price": 2599,
+          "img": "https://i.pinimg.com/736x/c7/f6/6e/c7f66e74cf92a8cfa5a4bc10baf3ab4b.jpg",
+          "des": "Elegant fragrance gift set.",
+          "offer": true
+        },
+        {
+          "id": 808,
+          "name": "Eucalyptus Spearmint Set",
+          "brand": "Bath & Body Works",
+          "price": 2799,
+          "img": "https://i.pinimg.com/736x/46/d0/c4/46d0c4991124ff1360e391362443f7d9.jpg",
+          "des": "Stress relief aromatherapy set."
+        }
+      ]
+    }
+  }
+}
