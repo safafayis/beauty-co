@@ -1,19 +1,3 @@
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import { BrowserRouter } from "react-router-dom";
-// import App from "./App";
-// import "./index.css";
-
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <BrowserRouter>
-//       <App />
-//     </BrowserRouter>
-//   </React.StrictMode>
-// );
-
-
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -24,18 +8,22 @@ import { WishlistProvider } from "./context/WishlistContext";
 import { OrderProvider } from "./context/OrderContext";
 import Footer from "./components/Footer";
 
+import { AuthProvider } from "./context/AuthContext";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
+    <AuthProvider>
     <WishlistProvider>
     <CartProvider>
       <OrderProvider>
-      <App />
+          <App />
       <Footer/>
       </OrderProvider>
     </CartProvider>
     </WishlistProvider>
+    </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

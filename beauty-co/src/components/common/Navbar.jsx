@@ -160,6 +160,7 @@ import { CartContext } from "../../context/CartContext";
 import { WishlistContext } from "../../context/WishlistContext";
 
 export default function Navbar() {
+   const user = JSON.parse(localStorage.getItem("user"));
   const { cart } = useContext(CartContext);
   const { wishlist } = useContext(WishlistContext);
 
@@ -187,13 +188,25 @@ export default function Navbar() {
   }, [showSearch]);
 
   return (
-    <header className="w-full border-b bg-white sticky top-0 z-50">
+    <header className={`w-full border-b bg-white sticky top-0 z-50 ${user?.role === 'admin' && 'hidden'}`}>
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4">
 
         {/* LOGO */}
-        <Link to="/" className="text-2xl font-bold tracking-wide">
-          Beauty-Co
-        </Link>
+        <Link
+  to="/"
+  className="
+    text-2xl
+    font-bold
+    tracking-wide
+    bg-gradient-to-r
+    from-pink-500
+    to-purple-400
+    bg-clip-text
+    text-transparent
+  "
+>
+  Beauty-Co
+</Link>
 
         {/* MAIN MENU */}
         <nav className="hidden md:flex gap-8 text-sm font-medium uppercase">

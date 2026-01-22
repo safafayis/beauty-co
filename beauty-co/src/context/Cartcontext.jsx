@@ -1,54 +1,156 @@
-// import { createContext, useState } from "react";
+// import { createContext, useEffect, useState } from "react";
 
 // export const CartContext = createContext();
 
 // export function CartProvider({ children }) {
-//   // 1️⃣ CART STATE
 //   const [cart, setCart] = useState([]);
+//   const [user, setUser] = useState(null);
 
-//   // 2️⃣ ADD TO CART
-//   const addToCart = (product) => {
-//     setCart((prevCart) => {
-//       const existing = prevCart.find(
-//         (item) => item.id === product.id
-//       );
+//   const getPriceBySize = (basePrice, size) => {
+//   if (size === "100ml") return basePrice + 100;
+//   if (size === "150ml") return basePrice + 200;
+//   return basePrice; 
+// };
 
-//       if (existing) {
-//         return prevCart.map((item) =>
-//           item.id === product.id
-//             ? { ...item, qty: item.qty + 1 }
-//             : item
-//         );
-//       }
 
-//       return [...prevCart, { ...product, qty: 1 }];
-//     });
+//   useEffect(() => {
+//     const storedUser = localStorage.getItem("user");
+//     if (storedUser) {
+//       const parsedUser = JSON.parse(storedUser);
+//       setUser(parsedUser);
+//       setCart(parsedUser.cart || []);
+//     }
+//   }, []);
+
+//   const syncCartToDB = async (updatedCart) => {
+//     if (!user?.id) return;
+
+//     try {
+//       await fetch(`http://localhost:3000/users/${user.id}`, {
+//         method: "PATCH",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({ cart: updatedCart })
+//       });
+
+//       const updatedUser = { ...user, cart: updatedCart };
+//       localStorage.setItem("user", JSON.stringify(updatedUser));
+//       setUser(updatedUser);
+//     } catch (err) {
+//       console.error("Cart sync failed:", err);
+//     }
 //   };
 
-//   // 3️⃣ REMOVE FROM CART
-//   const removeFromCart = (id) => {
-//     setCart((prevCart) =>
-//       prevCart.filter((item) => item.id !== id)
+// //  const addToCart = (product) => {
+// //   if (!user) return alert("Please login first");
+
+// //   const hasOffer = product.offer === true;
+// //   const finalPrice = hasOffer
+// //     ? Math.round(product.price * 0.8)
+// //     : product.price;
+
+// //   setCart((prev) => {
+// //     const existing = prev.find(
+// //       (i) => i.id === product.id && i.size === product.size
+// //     );
+
+// //     const updatedCart = existing
+// //       ? prev.map((i) =>
+// //           i.id === product.id && i.size === product.size
+// //             ? { ...i, qty: i.qty + (product.qty ?? 1) }
+// //             : i
+// //         )
+// //       : [
+// //           ...prev,
+// //           {
+// //             ...product,
+// //             price: finalPrice,      
+// //             qty: product.qty ?? 1,  
+// //             cartItemId: crypto.randomUUID(),
+// //           }
+// //         ];
+
+// //     syncCartToDB(updatedCart);
+// //     return updatedCart;
+// //   });
+// // };
+
+// const addToCart = (product) => {
+//   if (!user) return alert("Please login first");
+
+  
+//   const sizePrice = getPriceBySize(
+//     product.price,
+//     product.size
+//   );
+
+//   const finalPrice =
+//     product.offer === true
+//       ? Math.round(sizePrice * 0.8)
+//       : sizePrice;
+
+//   setCart((prev) => {
+//     const existing = prev.find(
+//       (i) =>
+//         i.id === product.id &&
+//         i.size === product.size
 //     );
-//   };
 
-//   // 4️⃣ UPDATE QUANTITY
+//     const updatedCart = existing
+//       ? prev.map((i) =>
+//           i.id === product.id &&
+//           i.size === product.size
+//             ? { ...i, qty: i.qty + (product.qty ?? 1) }
+//             : i
+//         )
+//       : [
+//           ...prev,
+//           {
+//             ...product,
+//             price: finalPrice,
+//             qty: product.qty ?? 1,
+//             cartItemId: crypto.randomUUID(),
+//           },
+//         ];
+
+//     syncCartToDB(updatedCart);
+//     return updatedCart;
+//   });
+// };
+
+
+//   const logout = () => {
+//   localStorage.removeItem("user");
+//   setUser(null);
+//   setCart([]);
+// };
+
+//   const removeFromCart = (cartItemId) => {
+//   setCart((prev) => {
+//     const updated = prev.filter(
+//       (i) => i.cartItemId !== cartItemId
+//     );
+//     syncCartToDB(updated);
+//     return updated;
+//   });
+// };
+
 //   const updateQty = (id, qty) => {
 //     if (qty < 1) return;
 
-//     setCart((prevCart) =>
-//       prevCart.map((item) =>
-//         item.id === id ? { ...item, qty } : item
-//       )
-//     );
+//     setCart((prev) => {
+//       const updated = prev.map((i) =>
+//         i.id === id ? { ...i, qty } : i
+//       );
+//       syncCartToDB(updated);
+//       return updated;
+//     });
 //   };
 
-//   // 5️⃣ CLEAR CART (OPTIONAL)
 //   const clearCart = () => {
 //     setCart([]);
+//     syncCartToDB([]);
 //   };
 
-//   // 6️⃣ TOTAL PRICE (OPTIONAL)
 //   const totalPrice = cart.reduce(
 //     (sum, item) => sum + item.price * item.qty,
 //     0
@@ -62,7 +164,9 @@
 //         removeFromCart,
 //         updateQty,
 //         clearCart,
-//         totalPrice
+//         totalPrice,
+//         user,
+//         logout      
 //       }}
 //     >
 //       {children}
@@ -71,94 +175,99 @@
 // }
 
 import { createContext, useEffect, useState } from "react";
+import { useAuth } from "./AuthContext";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
+  const { user, logout } = useAuth(); // ✅ single source of truth
   const [cart, setCart] = useState([]);
-  const [user, setUser] = useState(null);
 
-  // Load user from localStorage
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      const parsedUser = JSON.parse(storedUser);
-      setUser(parsedUser);
-      setCart(parsedUser.cart || []);
-    }
-  }, []);
-
-  const syncCartToDB = async (updatedCart) => {
-    if (!user?.id) return;
-
-    try {
-      await fetch(`http://localhost:3000/users/${user.id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ cart: updatedCart })
-      });
-
-      // keep localStorage in sync
-      const updatedUser = { ...user, cart: updatedCart };
-      localStorage.setItem("user", JSON.stringify(updatedUser));
-      setUser(updatedUser);
-    } catch (err) {
-      console.error("Cart sync failed:", err);
-    }
+  // 💰 price based on size
+  const getPriceBySize = (basePrice, size) => {
+    if (size === "100ml") return basePrice + 100;
+    if (size === "150ml") return basePrice + 200;
+    return basePrice;
   };
 
- const addToCart = (product) => {
-  if (!user) return alert("Please login first");
+  // 🔄 load cart when user changes
+  useEffect(() => {
+    if (user) {
+      setCart(user.cart || []);
+    } else {
+      setCart([]);
+    }
+  }, [user]);
 
-  // ✅ CENTRALIZED OFFER LOGIC
-  const hasOffer = product.offer === true;
-  const finalPrice = hasOffer
-    ? Math.round(product.price * 0.8)
-    : product.price;
+  // 🔄 sync cart to DB + localStorage
+  const syncCartToDB = async (updatedCart) => {
+  if (!user?.id) return;
 
-  setCart((prev) => {
-    const existing = prev.find(
-      (i) => i.id === product.id && i.size === product.size
-    );
+  try {
+    await fetch(`http://localhost:3000/users/${user.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cart: updatedCart })
+    });
 
-    const updatedCart = existing
-      ? prev.map((i) =>
-          i.id === product.id && i.size === product.size
-            ? { ...i, qty: i.qty + (product.qty ?? 1) }
-            : i
-        )
-      : [
-          ...prev,
-          {
-            ...product,
-            price: finalPrice,      // ✅ ALWAYS correct
-            qty: product.qty ?? 1,  // ✅ respects qty from details page
-            cartItemId: crypto.randomUUID(),
-          }
-        ];
-
-    syncCartToDB(updatedCart);
-    return updatedCart;
-  });
+    // 🔥 update AuthContext state
+    updateUser({ ...user, cart: updatedCart });
+  } catch (err) {
+    console.error("Cart sync failed:", err);
+  }
 };
 
+  // 🛒 ADD TO CART
+  const addToCart = (product) => {
+    if (!user) {
+      alert("Please login first");
+      return;
+    }
 
-  const logout = () => {
-  localStorage.removeItem("user");
-  setUser(null);
-  setCart([]);
-};
+    const sizePrice = getPriceBySize(product.price, product.size);
+    const finalPrice =
+      product.offer === true
+        ? Math.round(sizePrice * 0.8)
+        : sizePrice;
 
+    setCart((prev) => {
+      const existing = prev.find(
+        (i) => i.id === product.id && i.size === product.size
+      );
+
+      const updatedCart = existing
+        ? prev.map((i) =>
+            i.id === product.id && i.size === product.size
+              ? { ...i, qty: i.qty + (product.qty ?? 1) }
+              : i
+          )
+        : [
+            ...prev,
+            {
+              ...product,
+              price: finalPrice,
+              qty: product.qty ?? 1,
+              cartItemId: crypto.randomUUID()
+            }
+          ];
+
+      syncCartToDB(updatedCart);
+      return updatedCart;
+    });
+  };
+
+  // ❌ REMOVE FROM CART
   const removeFromCart = (cartItemId) => {
-  setCart((prev) => {
-    const updated = prev.filter(
-      (i) => i.cartItemId !== cartItemId
-    );
-    syncCartToDB(updated);
-    return updated;
-  });
-};
+    setCart((prev) => {
+      const updated = prev.filter(
+        (i) => i.cartItemId !== cartItemId
+      );
+      syncCartToDB(updated);
+      return updated;
+    });
+  };
 
+  // 🔢 UPDATE QTY
   const updateQty = (id, qty) => {
     if (qty < 1) return;
 
@@ -171,11 +280,13 @@ export function CartProvider({ children }) {
     });
   };
 
+  // 🧹 CLEAR CART
   const clearCart = () => {
     setCart([]);
     syncCartToDB([]);
   };
 
+  // 💵 TOTAL PRICE
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * item.qty,
     0
@@ -190,8 +301,7 @@ export function CartProvider({ children }) {
         updateQty,
         clearCart,
         totalPrice,
-        user,
-        logout      
+        logout // still available
       }}
     >
       {children}

@@ -39,7 +39,7 @@ export default function PaymentPage() {
                 </div>
 
                 <div className="space-y-4 mb-8">
-                    {/* UPI Option */}
+                    
                     <div
                         onClick={() => setSelectedMethod('upi')}
                         className={`border-2 rounded-xl p-5 cursor-pointer transition-all ${selectedMethod === 'upi'
@@ -83,7 +83,7 @@ export default function PaymentPage() {
                         )}
                     </div>
 
-                    {/* COD Option */}
+                   
                     <div
                         onClick={() => setSelectedMethod('cod')}
                         className={`border-2 rounded-xl p-5 cursor-pointer transition-all ${selectedMethod === 'cod'

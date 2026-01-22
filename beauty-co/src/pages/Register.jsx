@@ -1,9 +1,10 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 export default function Register() {
   const navigate = useNavigate();
+  const { register } = useAuth();
 
   const [form, setForm] = useState({
     name: "",
@@ -16,8 +17,7 @@ export default function Register() {
   const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
@@ -31,34 +31,19 @@ export default function Register() {
     }
 
     try {
-      const existing = await axios.get(
-        `http://localhost:3001/users?email=${form.email}`
-      );
-
-      if (existing.data.length > 0) {
-        setError("Email already registered");
-        return;
-      }
-
-      await axios.post("http://localhost:3001/users", {
-        name: form.name,
-        email: form.email,
-        password: form.password
-      });
-
+      await register(form);
       setSuccess("Account created successfully");
       setTimeout(() => navigate("/login"), 1500);
-    } catch {
-      setError("Server error");
+    } catch (err) {
+      setError(err.message);
     }
   };
+
 
   return (
     <div className="flex h-screen font-serif">
 
-      {/* LEFT – same as Login */}
       <div className="w-full lg:w-1/2 relative flex items-center">
-        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -67,10 +52,8 @@ export default function Register() {
           }}
         />
 
-        {/* Cream Overlay */}
         <div className="absolute inset-0 bg-[#F3EFE8]/75" />
 
-        {/* Content */}
         <div className="relative z-10 w-full px-10 lg:px-20">
           <div className="text-xl mb-10">Beauty Co.</div>
 
@@ -131,7 +114,7 @@ export default function Register() {
             {error && <p className="text-red-500 text-sm">{error}</p>}
             {success && <p className="text-green-600 text-sm">{success}</p>}
 
-            <button className="w-full bg-black text-white py-3 hover:opacity-90">
+            <button type="submit" className="w-full bg-black text-white py-3 hover:opacity-90">
               Create Account
             </button>
           </form>
@@ -148,7 +131,6 @@ export default function Register() {
         </div>
       </div>
 
-      {/* RIGHT – same as Login */}
       <div className="hidden lg:block w-1/2 relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"

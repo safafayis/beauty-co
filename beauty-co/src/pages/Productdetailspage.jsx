@@ -2,11 +2,15 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+import { useAuth } from "../context/AuthContext";
 
 export default function ProductSingleDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { addToCart, user } = useContext(CartContext);
+
+  // ✅ CORRECT SOURCES
+  const { addToCart } = useContext(CartContext);
+  const { user } = useAuth();
 
   const [product, setProduct] = useState(null);
   const [qty, setQty] = useState(1);
@@ -14,6 +18,7 @@ export default function ProductSingleDetails() {
   const sizes = ["50ml", "100ml", "150ml"];
   const [selectedSize, setSelectedSize] = useState("50ml");
 
+  // 🔄 Fetch product
   useEffect(() => {
     axios.get("http://localhost:3000/products").then((res) => {
       const allProducts = Object.values(res.data)
@@ -28,12 +33,12 @@ export default function ProductSingleDetails() {
     return <p className="text-center mt-20">Loading...</p>;
   }
 
-  // 🔥 OFFER LOGIC
   const hasOffer = product.offer === true;
   const discountedPrice = hasOffer
     ? Math.round(product.price * 0.8)
     : product.price;
 
+  // 🛒 ADD TO CART
   const handleAddToCart = () => {
     if (!user) {
       navigate("/login");
@@ -43,7 +48,7 @@ export default function ProductSingleDetails() {
     addToCart({
       ...product,
       size: selectedSize,
-      qty,
+      qty
     });
   };
 
@@ -53,23 +58,8 @@ export default function ProductSingleDetails() {
 
         {/* IMAGE */}
         <div className="relative flex items-center justify-center bg-gray-100 rounded-lg p-6">
-
-          {/* 🔴 OFFER LABEL */}
           {hasOffer && (
-            <span
-              className="
-                absolute
-                top-4
-                left-4
-                bg-red-600
-                text-white
-                text-sm
-                font-semibold
-                px-3
-                py-1
-                rounded
-              "
-            >
+            <span className="absolute top-4 left-4 bg-red-600 text-white text-sm font-semibold px-3 py-1 rounded">
               20% OFF
             </span>
           )}
@@ -83,15 +73,12 @@ export default function ProductSingleDetails() {
 
         {/* DETAILS */}
         <div className="flex flex-col">
-          <p className="text-sm text-gray-500 mb-1">
-            {product.brand}
-          </p>
+          <p className="text-sm text-gray-500 mb-1">{product.brand}</p>
 
           <h1 className="text-2xl md:text-3xl font-semibold mb-3">
             {product.name}
           </h1>
 
-          {/* 💰 PRICE */}
           {hasOffer ? (
             <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl font-bold text-pink-600">
@@ -107,9 +94,7 @@ export default function ProductSingleDetails() {
             </p>
           )}
 
-          <p className="text-gray-600 mb-6">
-            {product.des}
-          </p>
+          <p className="text-gray-600 mb-6">{product.des}</p>
 
           {/* SIZE */}
           <div className="mb-6">
@@ -119,12 +104,11 @@ export default function ProductSingleDetails() {
                 <button
                   key={size}
                   onClick={() => setSelectedSize(size)}
-                  className={`px-4 py-2 rounded border text-sm transition
-                    ${
-                      selectedSize === size
-                        ? "bg-black text-white border-black"
-                        : "border-gray-300 hover:border-black"
-                    }`}
+                  className={`px-4 py-2 rounded border text-sm transition ${
+                    selectedSize === size
+                      ? "bg-black text-white border-black"
+                      : "border-gray-300 hover:border-black"
+                  }`}
                 >
                   {size}
                 </button>
@@ -132,7 +116,7 @@ export default function ProductSingleDetails() {
             </div>
           </div>
 
-          {/* QUANTITY */}
+          {/* QTY */}
           <div className="flex items-center gap-4 mb-8">
             <span className="text-sm font-medium">Quantity</span>
             <div className="flex items-center border rounded">
@@ -155,16 +139,7 @@ export default function ProductSingleDetails() {
           {/* ADD TO CART */}
           <button
             onClick={handleAddToCart}
-            className="
-              w-full
-              bg-pink-600
-              text-white
-              py-3
-              rounded-lg
-              font-medium
-              hover:bg-pink-700
-              transition
-            "
+            className="w-full bg-pink-600 text-white py-3 rounded-lg font-medium hover:bg-pink-700 transition"
           >
             Add to Cart
           </button>

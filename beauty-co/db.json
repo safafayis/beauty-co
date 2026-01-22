@@ -1,160 +1,210 @@
 {
   "users": [
     {
-      "user": {
-        "id": "2afd",
-        "name": "safa",
-        "email": "safafayis27@gmail.com",
-        "password": "safafayis",
-        "cart": [
-          {
-            "id": 101,
-            "name": "Creamy Matte Lipstick",
-            "brand": "Lakme",
-            "price": 299,
-            "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
-            "des": "A creamy matte lipstick with intense color payoff.",
-            "size": "50ml",
-            "qty": 4,
-            "cartItemId": "4d649c05-4838-4637-a20e-ca025e9b2c0c"
-          },
-          {
-            "id": 601,
-            "name": "Gentle Skin Cleanser",
-            "brand": "Cetaphil",
-            "price": 349,
-            "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
-            "des": "Mild cleanser for sensitive skin.",
-            "size": "50ml",
-            "qty": 1,
-            "cartItemId": "a092c8f6-da42-4afd-8c8c-f29f017f8a65"
-          },
-          {
-            "id": 201,
-            "name": "Colossal Eyeliner",
-            "brand": "Maybelline",
-            "price": 299,
-            "img": "https://i.pinimg.com/736x/4b/d6/d1/4bd6d164928772c2fbf8b3a3780db743.jpg",
-            "des": "Deep black eyeliner with smooth application.",
-            "size": "50ml",
-            "qty": 1,
-            "cartItemId": "80aa8b95-941b-4194-9849-b3ddb0e78361"
-          }
-        ],
-        "wishlist": [],
-        "orders": [
-          {
-            "id": "1539aa33-def2-4df0-8f16-f9d76d0f5c49",
-            "userId": "2afd",
-            "items": [
-              {
-                "id": 203,
-                "name": "Epic Ink Liner",
-                "brand": "NYX",
-                "price": 799,
-                "img": "https://i.pinimg.com/1200x/dd/c0/e0/ddc0e018fee54c081c356ffe15bc0335.jpg",
-                "des": "Waterproof eyeliner with flexible brush.",
-                "size": "150ml",
-                "qty": 1,
-                "cartItemId": "311a372b-a3af-4258-959c-58688d4f10ea"
-              }
-            ],
-            "total": 799,
-            "status": "Placed",
-            "createdAt": "2026-01-14T12:57:51.959Z"
-          }
-        ]
-      },
-      "address": {
-        "fullName": "uhdsf",
-        "phoneNumber": "090767434214",
-        "pincode": "975446",
-        "state": "kerala",
-        "city": "kannur",
-        "houseNo": "kinfra",
-        "roadName": "kakkanchery",
-        "addressType": "home"
-      },
-      "id": "2afd",
-      "cart": [
+      "id": "78b98000-6218-41c7-befc-91aae21a915a",
+      "name": "sawadym",
+      "email": "sawadympes@gmail.com",
+      "password": "sawadrishu",
+      "role": "user",
+      "blocked": true,
+      "cart": [],
+      "wishlist": [
         {
-          "id": 202,
-          "name": "Eyeconic Liner",
-          "brand": "Lakme",
-          "price": 260,
-          "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
-          "des": "Water-resistant liquid eyeliner.",
-          "offer": true,
-          "size": "50ml",
-          "qty": 1,
-          "cartItemId": "fe0ceaa4-68db-4d41-a673-3c7579e79fe9"
+          "id": 303,
+          "name": "Kill Cover Mesh Glow Cushion Foundation",
+          "brand": "CLIO",
+          "price": 2699,
+          "img": "https://i.pinimg.com/736x/32/64/8c/32648c0666854702089269707b557fc4.jpg",
+          "des": "A glow-enhancing cushion foundation with a radiant finish."
         },
         {
           "id": 304,
           "name": "Mask Fit All Cover Pink Cushion Foundation",
           "brand": "TIRTIR",
-          "price": 1999,
+          "price": 2499,
           "img": "https://i.pinimg.com/1200x/8a/42/79/8a4279d6980dcf3e9ad9a8d45038cce7.jpg",
           "des": "A high-coverage cushion foundation designed to stay put under masks.",
-          "offer": true,
-          "size": "150ml",
-          "qty": 1,
-          "cartItemId": "25f226cd-1a2a-4fe5-aa5f-69f055426d4e"
+          "offer": true
+        },
+        {
+          "id": 302,
+          "name": "24H Fresh Wear",
+          "brand": "L'Oréal",
+          "price": 999,
+          "img": "https://i.pinimg.com/736x/c0/a8/99/c0a899c613ffb6c1755906d6e509d261.jpg",
+          "des": "A long-lasting foundation that delivers breathable, flawless coverage."
+        },
+        {
+          "id": 301,
+          "name": "Fit Me Matte Foundation",
+          "brand": "Maybelline",
+          "price": 549,
+          "img": "https://i.pinimg.com/1200x/08/cd/f5/08cdf572604c7b3072dbe92a948001b7.jpg",
+          "des": "A lightweight matte foundation that controls shine and provides natural-looking coverage."
         }
       ],
       "orders": [
         {
-          "id": "e36ac7c4-4d30-4a0e-ae7d-b0e4e7530182",
-          "userId": "2afd",
+          "orderId": "acef6c65-f8b3-4da1-95f5-c99617e932e8",
           "items": [
             {
-              "id": 201,
-              "name": "Colossal Eyeliner",
-              "brand": "Maybelline",
-              "price": 299,
-              "img": "https://i.pinimg.com/736x/4b/d6/d1/4bd6d164928772c2fbf8b3a3780db743.jpg",
-              "des": "Deep black eyeliner with smooth application.",
-              "size": "50ml",
+              "id": 310,
+              "name": "Cheek Pop",
+              "brand": "Clinique",
+              "price": 2750,
+              "img": "https://i.pinimg.com/1200x/de/76/52/de76525f802e1c8258f52aaf11773cc9.jpg",
+              "des": "A silky powder blush with a radiant finish.",
+              "size": "150ml",
               "qty": 1,
-              "cartItemId": "305bbbc9-f73d-4293-8659-e95f0c9bfd7f"
+              "cartItemId": "6fda3d30-c229-4667-bc96-4d4348d03221"
             }
           ],
-          "total": 299,
-          "status": "Placed",
-          "createdAt": "2026-01-15T06:00:08.665Z"
-        },
-        {
-          "id": "9e2ee4c4-4ad7-4c59-bff3-ffd2c81f415b",
-          "userId": "2afd",
-          "items": [
-            {
-              "id": 801,
-              "name": "Luxury Perfume Gift Set",
-              "brand": "Bella Vita",
-              "price": 999,
-              "img": "https://i.pinimg.com/1200x/87/08/96/870896d40d420e7e2fd566f54d408156.jpg",
-              "des": "Premium perfume gift set.",
-              "size": "50ml",
-              "qty": 1,
-              "cartItemId": "77e81602-28ad-42e1-bc5c-9b8f4791ed3f"
-            }
-          ],
-          "total": 999,
-          "status": "Placed",
-          "createdAt": "2026-01-15T08:56:13.592Z"
+          "total": 2750,
+          "status": "Shipped",
+          "createdAt": "2026-01-21T10:18:37.617Z"
         }
       ],
+      "address": {}
+    },
+    {
+      "id": "f2231bc9-6674-4b28-bed5-aa0d3b0a09cd",
+      "name": "Safa Fayis",
+      "email": "safafayis27@gmail.com",
+      "password": "safafayis",
+      "role": "user",
+      "blocked": false,
+      "cart": [],
       "wishlist": [
         {
-          "id": 101,
-          "name": "Creamy Matte Lipstick",
+          "id": 402,
+          "name": "9 to 5 Nail Color",
           "brand": "Lakme",
-          "price": 299,
-          "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
-          "des": "A creamy matte lipstick with intense color payoff.",
-          "offer": true
+          "price": 195,
+          "img": "https://i.pinimg.com/1200x/51/2c/95/512c95c209009a3924beeb11ae79d7c1.jpg",
+          "des": "A long-lasting nail color for everyday wear."
         }
-      ]
+      ],
+      "orders": [
+        {
+          "orderId": "850ba8f6-c986-452e-9ad7-a9dcbcca5fcb",
+          "items": [
+            {
+              "id": 101,
+              "name": "Creamy Matte Lipstick",
+              "brand": "Lakme",
+              "price": 399,
+              "img": "https://i.pinimg.com/736x/a1/0d/84/a10d84b7c26703c10df3780c9b249a15.jpg",
+              "des": "A creamy matte lipstick with intense color payoff.",
+              "offer": true,
+              "size": "150ml",
+              "qty": 1,
+              "cartItemId": "ea30c6bb-367e-4b2d-b9b6-0de0c91a33cc"
+            }
+          ],
+          "total": 399,
+          "status": "Placed",
+          "createdAt": "2026-01-21T12:53:54.837Z"
+        },
+        {
+          "orderId": "9281a161-c974-4358-ad6d-e5c84062331b",
+          "items": [
+            {
+              "id": 601,
+              "name": "Gentle Skin Cleanser",
+              "brand": "Cetaphil",
+              "price": 449,
+              "img": "https://i.pinimg.com/736x/fa/ad/d4/faadd436c7f1b9506bde2a584e216ec1.jpg",
+              "des": "Mild cleanser for sensitive skin.",
+              "size": "100ml",
+              "qty": 1,
+              "cartItemId": "4bf0ba80-aed4-4e85-b539-8665813bcb4d"
+            }
+          ],
+          "total": 449,
+          "status": "Placed",
+          "createdAt": "2026-01-21T16:25:04.250Z"
+        }
+      ],
+      "address": {}
+    },
+    {
+      "id": "dabc1337-8218-4893-a516-c5dc1df1e16b",
+      "name": "adil",
+      "email": "adil@gmail.com",
+      "password": "adil123",
+      "role": "user",
+      "blocked": false,
+      "cart": [
+        {
+          "id": 102,
+          "name": "Color Sensational Matte",
+          "brand": "Maybelline",
+          "price": 479,
+          "img": "https://i.pinimg.com/736x/a2/cc/5f/a2cc5f64767ec2fa0b1213f1b72e2b63.jpg",
+          "des": "Highly pigmented matte lipstick enriched with oils.",
+          "offer": true,
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "a23db322-a988-48b4-bb8d-fd5976aeda7c"
+        },
+        {
+          "id": 104,
+          "name": "Power Bullet Matte",
+          "brand": "Huda Beauty",
+          "price": 1950,
+          "img": "https://i.pinimg.com/1200x/56/cf/b1/56cfb1187ead01b4ffd775f049bc52ef.jpg",
+          "des": "Ultra-pigmented matte lipstick.",
+          "size": "50ml",
+          "qty": 1,
+          "cartItemId": "ddd31a7b-34a0-44df-8649-352fd4074785"
+        },
+        {
+          "id": 104,
+          "name": "Power Bullet Matte",
+          "brand": "Huda Beauty",
+          "price": 2150,
+          "img": "https://i.pinimg.com/1200x/56/cf/b1/56cfb1187ead01b4ffd775f049bc52ef.jpg",
+          "des": "Ultra-pigmented matte lipstick.",
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "4b9e90ca-3ba3-4059-9c91-500e4a7a3584"
+        }
+      ],
+      "wishlist": [],
+      "orders": [
+        {
+          "orderId": "0466ad37-69e8-4ba1-8236-e23da649406f",
+          "items": [
+            {
+              "id": 302,
+              "name": "24H Fresh Wear",
+              "brand": "L'Oréal",
+              "price": 1199,
+              "img": "https://i.pinimg.com/736x/c0/a8/99/c0a899c613ffb6c1755906d6e509d261.jpg",
+              "des": "A long-lasting foundation that delivers breathable, flawless coverage.",
+              "size": "150ml",
+              "qty": 1,
+              "cartItemId": "78eeb933-8b3a-4a82-b1e6-c3ebee4592d1"
+            }
+          ],
+          "total": 1199,
+          "status": "Delivered",
+          "createdAt": "2026-01-21T12:58:09.334Z"
+        }
+      ],
+      "address": {}
+    },
+    {
+      "id": "62338446-2f4b-4b41-b4bf-1bc217b4a6db",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "role": "admin",
+      "blocked": false,
+      "cart": [],
+      "wishlist": [],
+      "orders": [],
+      "address": {}
     }
   ],
   "products": {
@@ -758,5 +808,215 @@
         }
       ]
     }
-  }
+  },
+  "orders": [
+    {
+      "id": "b2a2",
+      "userId": "2afd",
+      "items": [
+        {
+          "id": 302,
+          "name": "24H Fresh Wear",
+          "brand": "L'Oréal",
+          "price": 1199,
+          "img": "https://i.pinimg.com/736x/c0/a8/99/c0a899c613ffb6c1755906d6e509d261.jpg",
+          "des": "A long-lasting foundation that delivers breathable, flawless coverage.",
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "0b4004d0-3c9b-4ac0-80a9-81eb1b1c4374"
+        }
+      ],
+      "total": 1199,
+      "status": "Placed",
+      "createdAt": "2026-01-21T08:20:51.845Z"
+    },
+    {
+      "id": "71e8",
+      "userId": "2afd",
+      "items": [
+        {
+          "id": 808,
+          "name": "Eucalyptus Spearmint Set",
+          "brand": "Bath & Body Works",
+          "price": 2999,
+          "img": "https://i.pinimg.com/736x/46/d0/c4/46d0c4991124ff1360e391362443f7d9.jpg",
+          "des": "Stress relief aromatherapy set.",
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "27827e9d-32ee-4850-96cf-caf9e53b5334"
+        }
+      ],
+      "total": 2999,
+      "status": "Placed",
+      "createdAt": "2026-01-21T08:21:06.046Z"
+    },
+    {
+      "id": "010e",
+      "userId": "undefined",
+      "items": [
+        {
+          "id": 202,
+          "name": "Eyeconic Liner",
+          "brand": "Lakme",
+          "price": 260,
+          "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
+          "des": "Water-resistant liquid eyeliner.",
+          "offer": true,
+          "size": "50ml",
+          "qty": 1,
+          "cartItemId": "8b9b5968-3ced-4470-8885-df53cecbc55f"
+        }
+      ],
+      "total": 260,
+      "status": "Placed",
+      "createdAt": "2026-01-21T08:21:55.306Z"
+    },
+    {
+      "id": "3ab5",
+      "userId": "undefined",
+      "items": [
+        {
+          "id": 201,
+          "name": "Colossal Eyeliner",
+          "brand": "Maybelline",
+          "price": 499,
+          "img": "https://i.pinimg.com/736x/4b/d6/d1/4bd6d164928772c2fbf8b3a3780db743.jpg",
+          "des": "Deep black eyeliner with smooth application.",
+          "size": "150ml",
+          "qty": 3,
+          "cartItemId": "758d1616-6f8b-43fe-8477-5bc375263e1c"
+        }
+      ],
+      "total": 1497,
+      "status": "Placed",
+      "createdAt": "2026-01-21T08:29:49.674Z"
+    },
+    {
+      "id": "72dc",
+      "userId": "78b98000-6218-41c7-befc-91aae21a915a",
+      "items": [
+        {
+          "id": 302,
+          "name": "24H Fresh Wear",
+          "brand": "L'Oréal",
+          "price": 1099,
+          "img": "https://i.pinimg.com/736x/c0/a8/99/c0a899c613ffb6c1755906d6e509d261.jpg",
+          "des": "A long-lasting foundation that delivers breathable, flawless coverage.",
+          "size": "100ml",
+          "qty": 1,
+          "cartItemId": "2cd1240b-b1c9-4a59-a56e-29fb5642e055"
+        },
+        {
+          "id": 306,
+          "name": "Pro Conceal HD",
+          "brand": "LA Girl",
+          "price": 795,
+          "img": "https://i.pinimg.com/736x/f8/62/77/f86277c8e6fa2e0d34fa8e4526229899.jpg",
+          "des": "A high-definition concealer for flawless coverage.",
+          "size": "100ml",
+          "qty": 1,
+          "cartItemId": "bef78b86-01d9-4c8d-a3e3-5646e509a90d"
+        },
+        {
+          "id": 304,
+          "name": "Mask Fit All Cover Pink Cushion Foundation",
+          "brand": "TIRTIR",
+          "price": 2159,
+          "img": "https://i.pinimg.com/1200x/8a/42/79/8a4279d6980dcf3e9ad9a8d45038cce7.jpg",
+          "des": "A high-coverage cushion foundation designed to stay put under masks.",
+          "offer": true,
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "7ee4710e-46de-451e-9c4c-c9e85840e445"
+        },
+        {
+          "id": 202,
+          "name": "Eyeconic Liner",
+          "brand": "Lakme",
+          "price": 420,
+          "img": "https://i.pinimg.com/1200x/2a/f5/80/2af5805e705b682ca3a5c1d15c41e885.jpg",
+          "des": "Water-resistant liquid eyeliner.",
+          "offer": true,
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "3395df61-7ff7-4bcc-a8a9-1056a5c9d9b4"
+        },
+        {
+          "id": 203,
+          "name": "Epic Ink Liner",
+          "brand": "NYX",
+          "price": 999,
+          "img": "https://i.pinimg.com/1200x/dd/c0/e0/ddc0e018fee54c081c356ffe15bc0335.jpg",
+          "des": "Waterproof eyeliner with flexible brush.",
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "b826bbce-b5f5-438b-9c98-617992103a3e"
+        }
+      ],
+      "total": 5472,
+      "status": "Placed",
+      "createdAt": "2026-01-21T09:37:24.883Z"
+    },
+    {
+      "id": "bc9d",
+      "userId": "78b98000-6218-41c7-befc-91aae21a915a",
+      "items": [
+        {
+          "id": 403,
+          "name": "Long Wear Nail Enamel",
+          "brand": "OPI",
+          "price": 1050,
+          "img": "https://i.pinimg.com/736x/d8/82/a7/d882a75b68f8084731f34dbbdd100752.jpg",
+          "des": "A premium long-wear nail enamel.",
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "2d948d00-0b4d-435f-9146-b677a4bf2a63"
+        }
+      ],
+      "total": 1050,
+      "status": "Placed",
+      "createdAt": "2026-01-21T09:37:58.986Z"
+    },
+    {
+      "id": "7082",
+      "userId": "78b98000-6218-41c7-befc-91aae21a915a",
+      "items": [
+        {
+          "id": 102,
+          "name": "Color Sensational Matte",
+          "brand": "Maybelline",
+          "price": 479,
+          "img": "https://i.pinimg.com/736x/a2/cc/5f/a2cc5f64767ec2fa0b1213f1b72e2b63.jpg",
+          "des": "Highly pigmented matte lipstick enriched with oils.",
+          "offer": true,
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "e33d6aa9-93d7-4cac-9b1e-bc34dea38923"
+        }
+      ],
+      "total": 479,
+      "status": "Placed",
+      "createdAt": "2026-01-21T09:51:03.176Z"
+    },
+    {
+      "id": "51b3",
+      "userId": "78b98000-6218-41c7-befc-91aae21a915a",
+      "items": [
+        {
+          "id": 403,
+          "name": "Long Wear Nail Enamel",
+          "brand": "OPI",
+          "price": 1050,
+          "img": "https://i.pinimg.com/736x/d8/82/a7/d882a75b68f8084731f34dbbdd100752.jpg",
+          "des": "A premium long-wear nail enamel.",
+          "size": "150ml",
+          "qty": 1,
+          "cartItemId": "1c7af34e-8def-4af0-8446-8e508afd55a7"
+        }
+      ],
+      "total": 1050,
+      "status": "Placed",
+      "createdAt": "2026-01-21T09:51:24.751Z"
+    }
+  ]
 }
