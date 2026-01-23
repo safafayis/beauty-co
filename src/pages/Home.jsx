@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
-export default function Home() {
+export default function 
+Home() {
   const navigate = useNavigate();
 
   const [featured, setFeatured] = useState([]);
@@ -44,6 +46,7 @@ export default function Home() {
 
   return (
     <div className="w-full">
+
 
       <section className="relative w-full h-[85vh] sm:h-[90vh] overflow-hidden">
   

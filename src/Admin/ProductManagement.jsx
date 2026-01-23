@@ -1,15 +1,16 @@
-
 import { useEffect, useState } from "react";
 import axios from "axios";
+import EditProductModal from "./EditProductModal";
 
 export default function AdminProducts() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     fetchProducts();
   }, []);
-
   const fetchProducts = async () => {
     try {
       const res = await axios.get("http://localhost:3000/products");
@@ -36,7 +37,6 @@ export default function AdminProducts() {
       setLoading(false);
     }
   };
-
   const deleteProduct = async (product) => {
     try {
       const res = await axios.get("http://localhost:3000/products");
@@ -54,9 +54,7 @@ export default function AdminProducts() {
         }
       });
 
-      setProducts((prev) =>
-        prev.filter((p) => p.id !== product.id)
-      );
+      setProducts((prev) => prev.filter((p) => p.id !== product.id));
     } catch (err) {
       alert("Failed to delete product");
     }
@@ -101,19 +99,22 @@ export default function AdminProducts() {
                 key={p.id}
                 className="border-b text-xs sm:text-sm hover:bg-gray-50 transition"
               >
-                <td className="p-3 font-medium break-words">
-                  {p.name}
-                </td>
+                <td className="p-3 font-medium break-words">{p.name}</td>
                 <td className="capitalize">{p.category}</td>
                 <td className="capitalize">{p.subcategory}</td>
                 <td>₹{p.price}</td>
                 <td>{p.offer ? "Yes" : "No"}</td>
                 <td className="text-center space-x-3">
                   <button
-                  
-                   className="text-blue-600 hover:underline">
+                    onClick={() => {
+                      setSelectedProduct(p);
+                      setIsModalOpen(true);
+                    }}
+                    className="text-blue-600 hover:underline"
+                  >
                     Edit
                   </button>
+
                   <button
                     onClick={() => deleteProduct(p)}
                     className="text-red-600 hover:underline"
@@ -126,6 +127,12 @@ export default function AdminProducts() {
           </tbody>
         </table>
       </div>
+      <EditProductModal
+        isOpen={isModalOpen}
+        product={selectedProduct}
+        onClose={() => setIsModalOpen(false)}
+        onUpdated={fetchProducts}
+      />
     </main>
   );
 }

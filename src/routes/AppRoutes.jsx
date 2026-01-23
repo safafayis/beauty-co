@@ -16,101 +16,79 @@ import Register from "../pages/Register";
 import Profile from "../pages/profile";
 import ProtectedRoute from "./protectRoute";
 import AdminProtectedRoute from "../Admin/AdminProtectedRoute";
-// import { Route } from "react-router-dom";
 import AdminLayout from "../Admin/AdminLayout";
 import AdminDashboard from "../Admin/Dashboard";
 import AdminProducts from "../Admin/ProductManagement";
 import AdminUsers from "../Admin/UserManagement";
 import AdminOrders from "../Admin/OrderManagement";
-
-
+import UserLayout from "../layout/UserLayout";
 
 export default function AppRoutes() {
   return (
-    // <Routes>
-    //   <Route path="/" element={<Home />} />
-
-    //   <Route path="/offers" element={<Offers />} /> 
-
-    //   <Route path="/lips" element={<ProductDetails category="lips" />} />
-    //   <Route path="/eyes" element={<ProductDetails category="eyes" />} />
-    //   <Route path="/nails" element={<ProductDetails category="nails" />} />
-    //   <Route path="/face" element={<ProductDetails category="face" />} />
-    //   <Route path="/skin" element={<ProductDetails category="skin" />} />
-    //   <Route path="/gifting" element={<ProductDetails category="gifting" />} />
-    //   <Route path="/product/:id" element={<ProductSingleDetails />} />
-    //   <Route path="/sales" element={<Sales />} />
-    //   <Route path="/search" element={<Search />} />
-    //   <Route path="/profile" element={<Profile />} />
-    //   <Route path="/orders" element={<Orders />} />
-    //   <Route path="/cart" element={<Cart />} />
-    //   <Route path="/wishlist" element={<Wishlist />} />
-    //   <Route path="/login" element={<Login />} />
-    //   <Route path="/register" element={<Register />} />
-    //   <Route path="/payment" element={<PaymentPage />} />
-    // </Routes>
-
     <Routes>
-      <Route path="/" element={<Home />} />
 
-      <Route path="/offers" element={<Offers />} />
+      {/* USER ROUTES WITH NAVBAR */}
+      <Route element={<UserLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/offers" element={<Offers />} />
+        <Route path="/lips" element={<ProductDetails category="lips" />} />
+        <Route path="/eyes" element={<ProductDetails category="eyes" />} />
+        <Route path="/nails" element={<ProductDetails category="nails" />} />
+        <Route path="/face" element={<ProductDetails category="face" />} />
+        <Route path="/skin" element={<ProductDetails category="skin" />} />
+        <Route path="/gifting" element={<ProductDetails category="gifting" />} />
+        <Route path="/product/:id" element={<ProductSingleDetails />} />
+        <Route path="/sales" element={<Sales />} />
+        <Route path="/search" element={<Search />} />
 
-      <Route path="/lips" element={<ProductDetails category="lips" />} />
-      <Route path="/eyes" element={<ProductDetails category="eyes" />} />
-      <Route path="/nails" element={<ProductDetails category="nails" />} />
-      <Route path="/face" element={<ProductDetails category="face" />} />
-      <Route path="/skin" element={<ProductDetails category="skin" />} />
-      <Route path="/gifting" element={<ProductDetails category="gifting" />} />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
 
-      <Route path="/product/:id" element={<ProductSingleDetails />} />
-      <Route path="/sales" element={<Sales />} />
-      <Route path="/search" element={<Search />} />
-      <Route
-        path="/profile"
-        element={
-          <ProtectedRoute>
-            <Profile />
-          </ProtectedRoute>
-        }
-      />
+        <Route
+          path="/orders"
+          element={
+            <ProtectedRoute>
+              <Orders />
+            </ProtectedRoute>
+          }
+        />
 
-      <Route
-        path="/orders"
-        element={
-          <ProtectedRoute>
-            <Orders />
-          </ProtectedRoute>
-        }
-      />
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          }
+        />
 
-      <Route
-        path="/cart"
-        element={
-          <ProtectedRoute>
-            <Cart />
-          </ProtectedRoute>
-        }
-      />
+        <Route
+          path="/wishlist"
+          element={
+            <ProtectedRoute>
+              <Wishlist />
+            </ProtectedRoute>
+          }
+        />
 
-      <Route
-        path="/wishlist"
-        element={
-          <ProtectedRoute>
-            <Wishlist />
-          </ProtectedRoute>
-        }
-      />
+        <Route
+          path="/payment"
+          element={
+            <ProtectedRoute>
+              <PaymentPage />
+            </ProtectedRoute>
+          }
+        />
+      </Route>
 
-      <Route
-        path="/payment"
-        element={
-          <ProtectedRoute>
-            <PaymentPage />
-          </ProtectedRoute>
-        }
-      />
-
-           <Route element={<AdminProtectedRoute />}>
+      {/* ADMIN ROUTES (NO USER NAVBAR) */}
+      <Route element={<AdminProtectedRoute />}>
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
           <Route path="products" element={<AdminProducts />} />
@@ -119,10 +97,12 @@ export default function AppRoutes() {
         </Route>
       </Route>
 
-
+      {/* AUTH ROUTES (NO NAVBAR IF YOU WANT) */}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+
     </Routes>
   );
 }
+
 

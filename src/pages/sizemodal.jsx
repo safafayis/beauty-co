@@ -15,7 +15,7 @@ const { addToCart } = useContext(CartContext);
   size: selected
 });
 
-    console.log("Added to cart:", cartItem);
+    console.log("Added to cart:", product);
     onClose();
   };
 

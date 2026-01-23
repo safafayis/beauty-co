@@ -111,7 +111,7 @@
             }
           ],
           "total": 299,
-          "status": "Placed",
+          "status": "Cancelled",
           "createdAt": "2026-01-15T06:00:08.665Z"
         },
         {
@@ -178,7 +178,7 @@
             }
           ],
           "total": 2737,
-          "status": "Placed",
+          "status": "Delivered",
           "createdAt": "2026-01-15T15:11:55.718Z"
         },
         {
@@ -210,7 +210,7 @@
             }
           ],
           "total": 698,
-          "status": "Placed",
+          "status": "Delivered",
           "createdAt": "2026-01-15T15:32:49.016Z"
         },
         {
@@ -254,7 +254,7 @@
             }
           ],
           "total": 638,
-          "status": "Placed",
+          "status": "Shipped",
           "createdAt": "2026-01-17T03:56:07.771Z"
         },
         {
@@ -400,6 +400,23 @@
         "role": "admin",
         "blocked": false
       }
+    },
+    {
+      "id": "9adaad9b-61da-42bf-8655-ad262f9e0739",
+      "user": {
+        "name": "mizna",
+        "email": "miznaar@gmail.com",
+        "password": "mizna123",
+        "cart": [],
+        "wishlist": [],
+        "orders": [],
+        "role": "user",
+        "blocked": false
+      },
+      "address": {},
+      "cart": [],
+      "orders": [],
+      "wishlist": []
     }
   ],
   "products": {
