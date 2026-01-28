@@ -22,30 +22,23 @@ export default function AdminUsers() {
   };
 
   const toggleBlock = async (userId, currentStatus) => {
-    try {
-      const currentUser = users.find((u) => u.id === userId);
+  try {
+    await axios.patch(`http://localhost:3000/users/${userId}`, {
+      blocked: !currentStatus // ✅ FLAT UPDATE
+    });
 
-      await axios.patch(`http://localhost:3000/users/${userId}`, {
-        user: {
-          ...currentUser.user,
-          blocked: !currentStatus
-        }
-      });
+    setUsers((prev) =>
+      prev.map((u) =>
+        u.id === userId
+          ? { ...u, blocked: !currentStatus }
+          : u
+      )
+    );
+  } catch (err) {
+    alert("Failed to update user status");
+  }
+};
 
-      setUsers((prev) =>
-        prev.map((u) =>
-          u.id === userId
-            ? {
-                ...u,
-                user: { ...u.user, blocked: !currentStatus }
-              }
-            : u
-        )
-      );
-    } catch (err) {
-      alert("Failed to update user status");
-    }
-  };
 
   if (loading) {
     return (
@@ -74,39 +67,40 @@ export default function AdminUsers() {
           </thead>
 
           <tbody>
-            {users.map((u) => (
+            {users.filter((u) => u.role !== "admin")
+            .map((u) => (
               <tr
                 key={u.id}
                 className="border-b text-xs sm:text-sm hover:bg-gray-50 transition"
               >
                 <td className="p-3 font-medium">
-                  {u.user?.name || "-"}
+                  {u.name || "-"}
                 </td>
-                <td className="break-all">{u.user?.email}</td>
+                <td className="break-all">{u.email}</td>
                 <td className="capitalize">
-                  {u.user?.role || "user"}
+                  {u.role || "user"}
                 </td>
                 <td
                   className={
-                    u.user?.blocked
+                    u.blocked
                       ? "text-red-600 font-medium"
                       : "text-green-600 font-medium"
                   }
                 >
-                  {u.user?.blocked ? "Blocked" : "Active"}
+                  {u.blocked ? "Blocked" : "Active"}
                 </td>
                 <td className="text-center">
                   <button
                     onClick={() =>
-                      toggleBlock(u.id, u.user?.blocked || false)
+                      toggleBlock(u.id, u.blocked || false)
                     }
                     className={`px-3 py-1 rounded text-white text-xs sm:text-sm transition ${
-                      u.user?.blocked
+                      u.blocked
                         ? "bg-green-600 hover:bg-green-700"
                         : "bg-red-500 hover:bg-red-600"
                     }`}
                   >
-                    {u.user?.blocked ? "Unblock" : "Block"}
+                    {u.blocked ? "Unblock" : "Block"}
                   </button>
                 </td>
               </tr>

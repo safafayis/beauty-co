@@ -42,7 +42,6 @@ export default function ProductCard({ product }) {
         flex-col
       "
     >
-      {/* 🔴 OFFER BADGE */}
       {hasOffer && (
         <span
           className="
@@ -63,7 +62,6 @@ export default function ProductCard({ product }) {
         </span>
       )}
 
-      {/* ❤️ WISHLIST */}
       <button
         onClick={(e) => {
           e.stopPropagation();
@@ -83,7 +81,6 @@ export default function ProductCard({ product }) {
         {isInWishlist(product.id) ? "❤️" : "🤍"}
       </button>
 
-      {/* IMAGE */}
       <div className="h-[170px] sm:h-[190px] bg-gray-50 rounded-t-xl flex items-center justify-center">
         <img
           src={product.img}
@@ -92,7 +89,6 @@ export default function ProductCard({ product }) {
         />
       </div>
 
-      {/* CONTENT */}
       <div className="p-3 sm:p-4 flex flex-col flex-grow">
         <h3 className="text-sm sm:text-base font-medium line-clamp-2 min-h-[40px]">
           {product.name}
@@ -103,7 +99,6 @@ export default function ProductCard({ product }) {
         </p>
 
         <div className="mt-auto">
-          {/* 💰 PRICE */}
           <div className="mt-2">
             {hasOffer ? (
               <div className="flex items-center gap-2">
@@ -121,7 +116,6 @@ export default function ProductCard({ product }) {
             )}
           </div>
 
-          {/* 🛒 ADD TO BAG */}
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -146,7 +140,6 @@ export default function ProductCard({ product }) {
         </div>
       </div>
 
-      {/* SIZE MODAL */}
       {sizeOpen && (
         <SizeModal
           product={product}

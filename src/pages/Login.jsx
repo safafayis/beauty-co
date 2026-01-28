@@ -18,54 +18,45 @@ export default function Login() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    
-    try {
-      
-      const res = await axios.get(
-        `http://localhost:3000/users?email=${form.email}&password=${form.password}`
-      );
+  e.preventDefault();
+  setError("");
 
-      console.log(res);
-      const result = res.data.filter(userObj => userObj.user.email === form.email)
-      
-      if (!result.length || result[0].user.password !== form.password) {
-        setError("Invalid email or password");
-        return;
-      }
+  try {
+    const res = await axios.get(
+      `http://localhost:3000/users?email=${form.email}`
+    );
 
-      const dbUser = result[0].user
-      console.log(dbUser);
-      
-      if (dbUser.blocked) {
-        setError("Your account has been blocked");
-        return;
-      }
-
-      const loggedInUser = {
-        id: dbUser.id,
-        name: dbUser.name,
-        email: dbUser.email,
-        role: dbUser.role || "user",
-        blocked: dbUser.blocked || false
-      };
-
-      console.log(loggedInUser);
-      
-      localStorage.setItem("user", JSON.stringify(loggedInUser));
-
-      if (loggedInUser.role === "admin") {
-        navigate("/admin");
-      } else {
-        navigate("/");
-      }
-    } catch (err) {
-      console.log(err);
-      
-      setError("Server error. Please try again.");
+    if (!res.data.length) {
+      setError("Invalid email or password");
+      return;
     }
-  };
+
+    const dbUser = res.data[0]; // ✅ FLAT USER
+
+    if (dbUser.password !== form.password) {
+      setError("Invalid email or password");
+      return;
+    }
+
+    if (dbUser.blocked) {
+      setError("Your account has been blocked");
+      return;
+    }
+
+    // ✅ STORE FULL USER (important)
+    localStorage.setItem("user", JSON.stringify(dbUser));
+
+    if (dbUser.role === "admin") {
+      navigate("/admin");
+    } else {
+      navigate("/");
+    }
+  } catch (err) {
+    console.error(err);
+    setError("Server error. Please try again.");
+  }
+};
+
 
   return (
     <div className="flex min-h-screen bg-cream font-serif">
@@ -167,3 +158,4 @@ export default function Login() {
     </div>
   );
 }
+

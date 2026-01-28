@@ -33,7 +33,7 @@ export function CartProvider({ children }) {
       });
 
       const updatedUser = { ...user, cart: updatedCart };
-      localStorage.setItem("user", JSON.stringify(updatedUser));
+      // localStorage.setItem("user", JSON.stringify(updatedUser));
       setUser(updatedUser);
     } catch (err) {
       console.error("Cart sync failed:", err);

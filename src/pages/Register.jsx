@@ -44,22 +44,18 @@ export default function Register() {
     }
 
     await axios.post("http://localhost:3000/users", {
-      id: crypto.randomUUID(),
-      user: {
+        id: crypto.randomUUID(),
         name: form.name,
         email: form.email,
         password: form.password,
+        role: "user",
+        blocked: false,
         cart: [],
         wishlist: [],
         orders: [],
-        role: 'user',
-        blocked: false
-      },
-      address: {},
-      cart: [],
-      orders: [],
-      wishlist: []
-    });
+        address: {}
+      });
+
 
     setSuccess("Account created successfully");
     setTimeout(() => navigate("/login"), 1500);
